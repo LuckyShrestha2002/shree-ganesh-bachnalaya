@@ -1,0 +1,1546 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>श्री गणेश बाचनालय धिमे: खल</title>
+<link rel="icon" type="image/png" href="https://res.cloudinary.com/dblepdhan/image/upload/v1776046116/shree_ganesh_logo-removebg-preview_fxkcdw.png"/>
+<link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Nepal&family=Cinzel:wght@400;600&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<style>
+:root{
+  --blue:#0055FF;
+  --navy:#001B44;
+  --tint:#F0F6FF;
+  --gray:#6B7280;
+  --border:#E5E7EB;
+  --white:#FFFFFF;
+  --blue-dark:#0040CC;
+  --blue-light:#3377FF;
+  --blue-pale:#C8D9FF;
+  --navy-light:#0A2E6E;
+  --red:#E05555;
+  --green:#2E9E5B;
+  --yellow:#FCC739;
+  --shadow:0 4px 24px rgba(0,85,255,0.10);
+  --shadow-md:0 8px 32px rgba(0,85,255,0.14);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--white);color:var(--navy);font-family:'Cormorant Garamond',serif;overflow-x:hidden}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:300;background:rgba(255,255,255,0.97);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 2rem;box-shadow:0 2px 16px rgba(0,27,68,0.07)}
+.nav-logo{display:flex;align-items:center;gap:.65rem;text-decoration:none}
+.nav-logo-img{width:38px;height:38px;object-fit:contain;filter:drop-shadow(0 2px 4px rgba(0,85,255,.18));transition:transform .3s}
+.nav-logo:hover .nav-logo-img{transform:rotate(-8deg) scale(1.08)}
+.nav-logo-text{font-family:'Tiro Devanagari Nepal',serif;color:var(--navy);font-size:.9rem;white-space:nowrap;font-weight:600;line-height:1.2}
+.nav-logo-text span{color:var(--blue)}
+.nav-links{display:flex;gap:1.4rem;list-style:none;align-items:center}
+.nav-links a{color:var(--gray);text-decoration:none;font-family:'Cinzel',serif;font-size:.62rem;letter-spacing:.13em;text-transform:uppercase;transition:color .25s}
+.nav-links a:hover{color:var(--blue)}
+.nav-admin{background:var(--blue)!important;color:#fff!important;padding:.38rem 1rem!important;border-radius:9999px!important;transition:background .25s!important;font-size:.62rem!important}
+.nav-admin:hover{background:var(--blue-dark)!important;color:#fff!important}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:.4rem;background:none;border:none}
+.hamburger span{display:block;width:22px;height:2px;background:var(--navy);border-radius:2px;transition:all .3s}
+.mobile-menu{display:none;position:fixed;top:64px;left:0;right:0;background:rgba(255,255,255,0.98);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);padding:1.2rem 1.5rem;z-index:299;flex-direction:column;gap:.8rem}
+.mobile-menu.open{display:flex}
+.mobile-menu a{color:var(--gray);text-decoration:none;font-family:'Cinzel',serif;font-size:.72rem;letter-spacing:.13em;text-transform:uppercase;padding:.5rem 0;border-bottom:1px solid var(--border)}
+.mobile-menu a:last-child{border:none}
+
+/* HERO */
+.hero{min-height:100vh;position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:7rem 1.5rem 5rem;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:url('https://res.cloudinary.com/dblepdhan/image/upload/v1775969651/shreeganesh_iaghfq.jpg') center center/cover no-repeat;filter:brightness(.45) saturate(.85)}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,27,68,.45) 0%,rgba(0,27,68,.55) 50%,rgba(0,27,68,.82) 100%)}
+.hero-content{position:relative;z-index:2;text-align:center;max-width:800px;margin:0 auto}
+.hero-badge{display:inline-flex;align-items:center;gap:.5rem;font-family:'Cinzel',serif;font-size:.62rem;letter-spacing:.3em;color:rgba(255,255,255,.85);text-transform:uppercase;border:1px solid rgba(255,255,255,.3);padding:.38rem 1.3rem;border-radius:9999px;margin-bottom:1.8rem;animation:fu 1s ease both;backdrop-filter:blur(4px);background:rgba(255,255,255,.07)}
+.hero-title{font-family:'Tiro Devanagari Nepal',serif;font-size:clamp(2.2rem,5.5vw,4.2rem);color:#fff;line-height:1.22;margin-bottom:.5rem;animation:fu 1s .15s ease both;text-shadow:0 2px 30px rgba(0,85,255,.35)}
+.hero-colon{color:var(--yellow);font-style:normal}
+.hero-sub{font-family:'Cinzel',serif;font-size:clamp(.72rem,1.8vw,1rem);color:rgba(255,255,255,.7);letter-spacing:.22em;animation:fu 1s .25s ease both;margin-bottom:1rem}
+.hero-div{width:180px;height:2px;background:linear-gradient(90deg,transparent,var(--blue),transparent);margin:.7rem auto 1.5rem;animation:fu 1s .3s ease both}
+.hero-tag{font-size:clamp(1rem,2.2vw,1.28rem);color:rgba(255,255,255,.85);font-style:normal;max-width:580px;margin:0 auto 2.8rem;line-height:1.9;animation:fu 1s .4s ease both}
+.hero-cta{display:flex;gap:.9rem;flex-wrap:wrap;justify-content:center;animation:fu 1s .55s ease both}
+.scroll-hint{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:.4rem;animation:fu 1s 1s ease both}
+.scroll-hint span{font-family:'Cinzel',serif;font-size:.52rem;letter-spacing:.22em;color:rgba(255,255,255,.55);text-transform:uppercase}
+.scroll-line{width:1px;height:34px;background:linear-gradient(to bottom,rgba(255,255,255,.5),transparent);animation:sp 2s infinite}
+@keyframes sp{0%,100%{opacity:.3}50%{opacity:1}}
+@keyframes fu{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+@keyframes logopulse{0%,100%{transform:scale(1) translateY(0)}50%{transform:scale(1.06) translateY(-4px)}}
+
+/* BUTTONS */
+.btn{display:inline-flex;align-items:center;justify-content:center;font-family:'Cinzel',serif;font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;cursor:pointer;border:none;border-radius:9999px;transition:all .28s;text-decoration:none;padding:.75rem 2rem;gap:.4rem}
+.btn-blue{background:var(--blue);color:#fff}
+.btn-blue:hover{background:var(--blue-dark);transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,85,255,.3)}
+.btn-white{background:#fff;color:var(--navy)}
+.btn-white:hover{background:var(--tint);transform:translateY(-2px)}
+.btn-ghost{background:rgba(255,255,255,.1);color:#fff;border:1px solid rgba(255,255,255,.35)}
+.btn-ghost:hover{background:rgba(255,255,255,.2);border-color:rgba(255,255,255,.6);transform:translateY(-2px)}
+.btn-outline{background:transparent;color:var(--blue);border:1px solid var(--blue)}
+.btn-outline:hover{background:var(--tint);transform:translateY(-2px)}
+.btn-full{width:100%;padding:.82rem}
+.btn-red{background:var(--red);color:#fff}
+.btn-red:hover{background:#c43a3a}
+.btn-sm{padding:.45rem 1.1rem;font-size:.58rem}
+
+/* SECTIONS */
+section{padding:5.5rem 1.5rem}
+.container{max-width:1100px;margin:0 auto}
+.sec-label{font-family:'Cinzel',serif;font-size:.6rem;letter-spacing:.38em;color:var(--blue);text-transform:uppercase;text-align:center;margin-bottom:.6rem}
+.sec-title{font-family:'Tiro Devanagari Nepal',serif;font-size:clamp(1.7rem,3.5vw,2.8rem);color:var(--navy);text-align:center;line-height:1.28;margin-bottom:.45rem}
+.sec-en{font-family:'Cinzel',serif;font-size:clamp(.85rem,2vw,1.15rem);color:var(--gray);text-align:center;letter-spacing:.08em;margin-bottom:.7rem}
+.sec-div{width:60px;height:3px;background:var(--blue);margin:0 auto 3rem;border-radius:9999px}
+
+/* ABOUT */
+.about{background:var(--tint)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
+.about-text p{font-size:1.08rem;line-height:2;color:var(--gray);margin-bottom:1rem}
+.about-text p:first-child{font-style:normal;font-size:1.18rem;color:var(--navy)}
+.about-stats{display:flex;flex-direction:column;gap:1.1rem}
+.stat-card{border-left:4px solid var(--blue);padding:1.2rem 1.5rem;background:var(--white);box-shadow:var(--shadow);border-radius:0 12px 12px 0}
+.stat-n{font-family:'Cinzel',serif;font-size:2.1rem;color:var(--blue);font-weight:600;line-height:1;margin-bottom:.28rem}
+.stat-l{font-family:'Tiro Devanagari Nepal',serif;font-size:.92rem;color:var(--gray)}
+
+/* FESTIVALS */
+.festivals{background:var(--white)}
+.fest-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:1.6rem}
+.fest-card{background:var(--white);border:1px solid var(--border);border-radius:16px;overflow:hidden;transition:transform .35s cubic-bezier(.22,.68,0,1.2),box-shadow .35s;cursor:pointer;position:relative}
+.fest-card::after{content:'View Details';position:absolute;bottom:0;left:0;right:0;background:linear-gradient(0deg,rgba(0,27,68,.92) 0%,transparent 100%);color:#fff;font-family:'Cinzel',serif;font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;padding:1.2rem;text-align:center;opacity:0;transition:opacity .3s;pointer-events:none}
+.fest-card:hover{transform:translateY(-8px) scale(1.02);box-shadow:0 20px 50px rgba(0,85,255,.18)}
+.fest-card:hover::after{opacity:1}
+.fest-card:hover .fest-img{filter:brightness(1.08)}
+.fest-img{width:100%;height:175px;display:flex;align-items:center;justify-content:center;font-size:3.8rem;position:relative;transition:filter .3s}
+.fest-img-real{width:100%;height:175px;object-fit:cover;display:block;transition:transform .4s}
+.fest-card:hover .fest-img-real{transform:scale(1.06)}
+.bg1{background:linear-gradient(135deg,var(--navy),var(--blue))}
+.bg2{background:linear-gradient(135deg,#6B2D8B,#E8558A,var(--blue))}
+.bg3{background:linear-gradient(135deg,var(--navy-light),var(--blue-light))}
+.bg4{background:linear-gradient(135deg,#1A7A3A,var(--blue))}
+.bg5{background:linear-gradient(135deg,var(--blue),var(--yellow))}
+.bg6{background:linear-gradient(135deg,#8B4500,var(--blue))}
+.fest-body{padding:1.4rem}
+.fest-body h3{font-family:'Tiro Devanagari Nepal',serif;font-size:1.18rem;color:var(--navy);margin-bottom:.12rem}
+.fest-body h4{font-family:'Cinzel',serif;font-size:.64rem;letter-spacing:.1em;color:var(--blue);margin-bottom:.7rem}
+.fest-body p{font-size:.97rem;line-height:1.75;color:var(--gray)}
+
+/* NOTICES */
+.notices{background:var(--tint)}
+.notice-list{display:flex;flex-direction:column;gap:1.2rem}
+.notice-card{background:var(--white);border:1px solid var(--border);border-radius:16px;padding:1.6rem 1.8rem;box-shadow:var(--shadow);transition:transform .3s}
+.notice-card:hover{transform:translateX(4px)}
+.notice-card-title{font-family:'Cinzel',serif;font-size:.9rem;letter-spacing:.08em;color:var(--blue);margin-bottom:.5rem}
+.notice-card-msg{font-size:1.05rem;line-height:1.82;color:var(--gray)}
+.notice-meta{display:flex;flex-wrap:wrap;gap:1rem;margin-top:.8rem}
+.notice-meta-item{font-family:'Cinzel',serif;font-size:.6rem;letter-spacing:.1em;color:var(--gray);text-transform:uppercase;display:flex;align-items:center;gap:.3rem}
+.notice-empty{text-align:center;padding:3rem 2rem;color:var(--gray);font-style:italic;border:2px dashed var(--border);border-radius:16px}
+
+/* MEMORIES */
+.memories{background:var(--white)}
+.folder-tabs{display:flex;flex-wrap:wrap;gap:.7rem;margin-bottom:2rem;justify-content:center}
+.folder-tab{font-family:'Cinzel',serif;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;padding:.48rem 1.2rem;border:1px solid var(--border);border-radius:9999px;cursor:pointer;transition:all .25s;background:var(--white);color:var(--gray)}
+.folder-tab:hover,.folder-tab.active{background:var(--blue);color:#fff;border-color:var(--blue)}
+.mem-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.5rem}
+.mem-card{background:var(--white);border:1px solid var(--border);border-radius:16px;overflow:hidden;transition:transform .3s,box-shadow .3s;box-shadow:var(--shadow);cursor:pointer}
+.mem-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md)}
+.mem-thumb{width:100%;height:215px;object-fit:cover;display:block;background:var(--tint)}
+.vid-wrap{position:relative;width:100%;height:215px;background:#000;overflow:hidden}
+.vid-wrap video{width:100%;height:100%;object-fit:cover;display:block}
+.vid-play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:48px;height:48px;background:rgba(0,85,255,.85);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.1rem;color:#fff;pointer-events:none}
+.mem-info{padding:1rem 1.2rem}
+.mem-event{font-family:'Tiro Devanagari Nepal',serif;font-size:1.1rem;color:var(--navy);margin-bottom:.3rem}
+.mem-meta{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:.25rem}
+.mem-meta-item{font-family:'Cinzel',serif;font-size:.6rem;letter-spacing:.08em;color:var(--gray);display:flex;align-items:center;gap:.25rem}
+.mem-badge{font-family:'Cinzel',serif;font-size:.53rem;letter-spacing:.07em;padding:.18rem .55rem;border-radius:9999px;text-transform:uppercase}
+.badge-p{background:var(--tint);color:var(--blue)}
+.badge-v{background:#FFF8E1;color:#8B6000}
+.empty-sec{grid-column:1/-1;text-align:center;padding:4rem 2rem;color:var(--gray);border:2px dashed var(--border);border-radius:16px}
+.empty-sec p{font-style:italic;font-size:1.05rem;margin-top:.9rem}
+
+/* MEMBERS */
+.members{background:var(--tint)}
+.members-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:1.6rem}
+.member-card{background:var(--white);border:1px solid var(--border);border-radius:16px;padding:1.6rem 1rem;text-align:center;transition:transform .32s cubic-bezier(.22,.68,0,1.2),box-shadow .32s;position:relative;overflow:hidden}
+/* Paper lift effect */
+.member-card::before{content:'';position:absolute;bottom:-6px;left:8px;right:8px;height:20px;background:rgba(0,27,68,.06);filter:blur(8px);border-radius:50%;transform:scaleX(.85);transition:all .32s;z-index:-1}
+.member-card:hover{transform:translateY(-8px) rotate(-0.5deg);box-shadow:0 20px 50px rgba(0,27,68,.13),0 8px 20px rgba(0,85,255,.08)}
+.member-card:hover::before{bottom:-12px;filter:blur(14px);transform:scaleX(.75);opacity:.7}
+.member-card:hover .member-name{animation:nameshake .4s ease}
+@keyframes nameshake{
+  0%{transform:translateX(0)}
+  20%{transform:translateX(-4px)}
+  40%{transform:translateX(4px)}
+  60%{transform:translateX(-3px)}
+  80%{transform:translateX(3px)}
+  100%{transform:translateX(0)}
+}
+/* Gradient ring avatar border */
+.member-avatar-wrap{width:90px;height:90px;border-radius:50%;background:linear-gradient(135deg,#FCC739,#FF6B6B,#0055FF,#00C9FF);padding:3px;margin:0 auto .85rem;display:block}
+.member-avatar{width:100%;height:100%;border-radius:50%;object-fit:cover;display:block;border:3px solid var(--white)}
+.member-av-ph{width:84px;height:84px;border-radius:50%;background:linear-gradient(135deg,var(--blue),var(--navy));display:flex;align-items:center;justify-content:center;font-family:'Cinzel',serif;font-size:1.6rem;color:#fff;border:3px solid var(--white)}
+.member-name{font-family:'Tiro Devanagari Nepal',serif;font-size:1.05rem;color:var(--navy);margin-bottom:.22rem;display:inline-block}
+.member-role{font-family:'Cinzel',serif;font-size:.58rem;letter-spacing:.1em;color:var(--blue);text-transform:uppercase}
+
+/* HONOURS */
+.honours{background:var(--white)}
+.honours-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.8rem}
+.honour-card{background:var(--white);border:1px solid var(--border);border-radius:16px;overflow:hidden;box-shadow:var(--shadow);transition:transform .35s cubic-bezier(.22,.68,0,1.2),box-shadow .35s;cursor:pointer;position:relative}
+.honour-card::after{content:'Read Story';position:absolute;bottom:0;left:0;right:0;background:linear-gradient(0deg,rgba(0,27,68,.9) 0%,transparent 100%);color:#fff;font-family:'Cinzel',serif;font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;padding:1.2rem;text-align:center;opacity:0;transition:opacity .3s;pointer-events:none}
+.honour-card:hover{transform:translateY(-8px) scale(1.02);box-shadow:0 20px 55px rgba(0,85,255,.16)}
+.honour-card:hover::after{opacity:1}
+.honour-img{width:100%;height:200px;object-fit:cover;display:block;background:var(--tint);transition:transform .4s}
+.honour-card:hover .honour-img{transform:scale(1.05)}
+.honour-img-ph{width:100%;height:200px;background:linear-gradient(135deg,var(--tint),var(--blue-pale));display:flex;align-items:center;justify-content:center;font-size:4rem}
+.honour-body{padding:1.4rem}
+.honour-name{font-family:'Tiro Devanagari Nepal',serif;font-size:1.2rem;color:var(--navy);margin-bottom:.3rem}
+.honour-badge{display:inline-block;font-family:'Cinzel',serif;font-size:.58rem;letter-spacing:.1em;padding:.2rem .7rem;border-radius:9999px;background:var(--tint);color:var(--blue);text-transform:uppercase;margin-bottom:.6rem}
+.honour-desc{font-size:.98rem;line-height:1.78;color:var(--gray)}
+
+/* JOIN */
+.join{background:var(--tint)}
+.join-card{max-width:660px;margin:0 auto;background:linear-gradient(135deg,var(--navy),var(--blue));border-radius:24px;padding:3.5rem 3rem;text-align:center;box-shadow:0 20px 60px rgba(0,27,68,.25)}
+.join-card h2{font-family:'Tiro Devanagari Nepal',serif;font-size:2rem;color:#fff;margin-bottom:.38rem}
+.join-card h3{font-family:'Cinzel',serif;font-size:.8rem;letter-spacing:.15em;color:rgba(255,255,255,.65);margin-bottom:1.5rem}
+.join-card p{font-size:1rem;line-height:1.9;color:rgba(255,255,255,.78);margin-bottom:2rem}
+.join-form{display:flex;gap:.65rem;max-width:430px;margin:0 auto}
+.join-form input{flex:1;padding:.75rem 1.2rem;background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.25);color:#fff;font-family:'Cormorant Garamond',serif;font-size:.98rem;border-radius:9999px;outline:none;transition:border-color .3s}
+.join-form input::placeholder{color:rgba(255,255,255,.4)}
+.join-form input:focus{border-color:#fff}
+
+/* FOOTER */
+footer{background:var(--navy);color:#fff;padding:3rem 1.5rem;text-align:center}
+.foot-logo{font-family:'Tiro Devanagari Nepal',serif;font-size:1.4rem;color:#fff;margin-bottom:.35rem}
+.foot-logo span{color:var(--blue)}
+.foot-tag{font-family:'Cinzel',serif;font-size:.58rem;letter-spacing:.24em;color:rgba(255,255,255,.5);text-transform:uppercase;margin-bottom:1.2rem}
+footer p{font-size:.85rem;color:rgba(255,255,255,.35);line-height:1.9}
+
+/* MODAL */
+.modal-bg{display:none;position:fixed;inset:0;background:rgba(0,27,68,.75);backdrop-filter:blur(8px);z-index:1000;align-items:center;justify-content:center;padding:1rem}
+.modal-bg.open{display:flex}
+.modal{background:var(--white);border-radius:20px;padding:2.4rem;width:100%;max-width:520px;box-shadow:0 30px 80px rgba(0,0,0,.28);position:relative;animation:min .3s ease;max-height:92vh;overflow-y:auto}
+@keyframes min{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}
+.modal-x{position:absolute;top:1rem;right:1rem;background:var(--tint);border:none;font-size:1rem;cursor:pointer;color:var(--gray);transition:all .2s;width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center}
+.modal-x:hover{background:var(--border);color:var(--navy)}
+.modal h2{font-family:'Cinzel',serif;font-size:1rem;letter-spacing:.1em;color:var(--navy);margin-bottom:1.5rem}
+.fg{margin-bottom:1.15rem}
+.fg label{display:block;font-family:'Cinzel',serif;font-size:.62rem;letter-spacing:.11em;color:var(--gray);text-transform:uppercase;margin-bottom:.38rem}
+.fg input,.fg select,.fg textarea{width:100%;padding:.72rem 1rem;border:1px solid var(--border);border-radius:12px;font-family:'Cormorant Garamond',serif;font-size:.98rem;color:var(--navy);outline:none;transition:border-color .3s;background:var(--white)}
+.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(0,85,255,.08)}
+.fg textarea{resize:vertical;min-height:100px}
+.ferr{color:var(--red);font-size:.82rem;margin-top:.35rem;font-style:italic;display:none}
+
+/* ADMIN PANEL */
+.admin-panel{display:none;position:fixed;inset:0;background:#F8FAFF;z-index:900;overflow-y:auto}
+.admin-panel.open{display:block}
+.admin-header{background:var(--navy);color:#fff;padding:1rem 1.8rem;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:10;gap:1rem;flex-wrap:wrap}
+.admin-header h1{font-family:'Cinzel',serif;font-size:.85rem;letter-spacing:.1em;white-space:nowrap}
+.admin-tabs{display:flex;gap:.4rem;flex-wrap:wrap}
+.atab{font-family:'Cinzel',serif;font-size:.58rem;letter-spacing:.09em;padding:.38rem .85rem;border-radius:9999px;cursor:pointer;border:1px solid rgba(255,255,255,.25);background:transparent;color:rgba(255,255,255,.8);transition:all .25s;text-transform:uppercase;white-space:nowrap}
+.atab.active,.atab:hover{background:var(--blue);color:#fff;border-color:var(--blue)}
+.admin-body{max-width:980px;margin:0 auto;padding:2rem 1.4rem}
+.admin-card{background:var(--white);border:1px solid var(--border);border-radius:16px;padding:1.8rem;margin-bottom:1.8rem}
+.admin-st{font-family:'Cinzel',serif;font-size:.76rem;letter-spacing:.14em;color:var(--navy);text-transform:uppercase;margin-bottom:1.4rem;padding-bottom:.55rem;border-bottom:1px solid var(--border)}
+.tab-content{display:none}
+.tab-content.active{display:block}
+
+/* UPLOAD ZONE */
+.upload-zone{border:2px dashed var(--border);border-radius:12px;padding:1.8rem;text-align:center;cursor:pointer;transition:all .3s;background:var(--tint);margin-bottom:.9rem}
+.upload-zone:hover{border-color:var(--blue);background:var(--blue-pale)}
+.upload-zone .uicon{font-size:2rem;margin-bottom:.4rem}
+.upload-zone p{font-style:italic;color:var(--gray);font-size:.95rem}
+.preview-wrap{display:none;margin-top:.9rem;border-radius:12px;overflow:hidden;max-height:220px}
+.preview-wrap img,.preview-wrap video{width:100%;max-height:220px;object-fit:cover;display:block}
+.prog-wrap{height:5px;background:var(--tint);border-radius:9999px;margin-top:.7rem;display:none}
+.prog{height:100%;background:var(--blue);border-radius:9999px;width:0%;transition:width .25s}
+
+/* FOLDER + MEDIA */
+.folder-list-admin{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1rem;margin-bottom:1.5rem}
+.folder-item{background:var(--tint);border:1px solid var(--border);border-radius:12px;padding:1rem 1.1rem;display:flex;align-items:center;gap:.75rem;transition:all .25s}
+.folder-item:hover{border-color:var(--blue);box-shadow:var(--shadow)}
+.folder-name-txt{font-family:'Cinzel',serif;font-size:.68rem;letter-spacing:.07em;color:var(--navy);text-transform:uppercase}
+.folder-del{margin-left:auto;background:none;border:none;color:var(--gray);cursor:pointer;font-size:.9rem;transition:color .2s;padding:.2rem}
+.folder-del:hover{color:var(--red)}
+.admin-media-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(175px,1fr));gap:.9rem}
+.admin-media-item{background:var(--white);border:1px solid var(--border);border-radius:12px;overflow:hidden;position:relative}
+.admin-media-item img,.admin-media-item video{width:100%;height:125px;object-fit:cover;display:block}
+.admin-media-info{padding:.6rem .8rem}
+.ami-event{font-family:'Tiro Devanagari Nepal',serif;font-size:.88rem;color:var(--navy)}
+.ami-date{font-family:'Cinzel',serif;font-size:.56rem;color:var(--blue);margin-top:.12rem}
+.del-btn{position:absolute;top:.4rem;right:.4rem;background:rgba(224,85,85,.9);color:#fff;border:none;border-radius:50%;width:24px;height:24px;cursor:pointer;font-size:.7rem;display:flex;align-items:center;justify-content:center}
+.del-btn:hover{background:var(--red)}
+.type-pill{position:absolute;top:.4rem;left:.4rem;font-family:'Cinzel',serif;font-size:.5rem;padding:.16rem .44rem;border-radius:9999px;text-transform:uppercase}
+.pill-p{background:rgba(0,85,255,.85);color:#fff}
+.pill-v{background:rgba(184,106,0,.85);color:#fff}
+
+/* MEMBER ADMIN */
+.member-admin-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(165px,1fr));gap:.9rem}
+.member-admin-item{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:1rem;text-align:center;position:relative}
+.member-admin-item img{width:54px;height:54px;border-radius:50%;object-fit:cover;margin:0 auto .5rem;display:block;border:2px solid var(--tint)}
+.mai-name{font-family:'Tiro Devanagari Nepal',serif;font-size:.9rem;color:var(--navy)}
+.mai-role{font-family:'Cinzel',serif;font-size:.56rem;color:var(--blue);letter-spacing:.08em;margin-top:.12rem}
+.mai-email{font-size:.72rem;color:var(--gray);margin-top:.12rem;word-break:break-all}
+
+/* FESTIVAL ADMIN */
+.fest-admin-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:1rem}
+.fest-admin-item{background:var(--white);border:1px solid var(--border);border-radius:12px;overflow:hidden;position:relative}
+.fest-admin-item img{width:100%;height:110px;object-fit:cover;display:block;background:var(--tint)}
+.fest-admin-info{padding:.8rem 1rem}
+.fai-title{font-family:'Tiro Devanagari Nepal',serif;font-size:.95rem;color:var(--navy)}
+.fai-sub{font-family:'Cinzel',serif;font-size:.58rem;color:var(--blue);margin-top:.1rem}
+
+/* HONOUR ADMIN */
+.honour-admin-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:1rem}
+.honour-admin-item{background:var(--white);border:1px solid var(--border);border-radius:12px;overflow:hidden;position:relative}
+.honour-admin-item img{width:100%;height:120px;object-fit:cover;display:block;background:var(--tint)}
+.honour-admin-info{padding:.8rem 1rem}
+.hai-name{font-family:'Tiro Devanagari Nepal',serif;font-size:.95rem;color:var(--navy)}
+.hai-desc{font-size:.82rem;color:var(--gray);margin-top:.2rem;line-height:1.5}
+
+/* NOTICE ADMIN */
+.notice-admin-list{display:flex;flex-direction:column;gap:.9rem}
+.notice-admin-item{background:var(--tint);border:1px solid var(--border);border-left:3px solid var(--blue);border-radius:0 12px 12px 0;padding:1rem 1.2rem;display:flex;align-items:flex-start;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+.nai-title{font-family:'Cinzel',serif;font-size:.8rem;letter-spacing:.07em;color:var(--blue);margin-bottom:.3rem}
+.nai-msg{font-size:.95rem;color:var(--gray);line-height:1.6}
+.nai-date{font-family:'Cinzel',serif;font-size:.58rem;color:var(--gray);margin-top:.3rem}
+.email-status{font-family:'Cinzel',serif;font-size:.58rem;letter-spacing:.07em;padding:.18rem .55rem;border-radius:9999px;text-transform:uppercase}
+.status-sent{background:#E8F5E9;color:#2E7D32}
+
+/* TOAST & LOADING */
+.toast{position:fixed;bottom:2rem;right:2rem;background:var(--navy);color:#fff;padding:.9rem 1.5rem;border-radius:12px;font-family:'Cinzel',serif;font-size:.68rem;letter-spacing:.1em;box-shadow:0 8px 30px rgba(0,0,0,.2);transform:translateY(120px);opacity:0;transition:all .38s;z-index:5000;max-width:320px}
+.toast.show{transform:translateY(0);opacity:1}
+.loading-ov{position:fixed;inset:0;background:rgba(255,255,255,.9);display:none;flex-direction:column;align-items:center;justify-content:center;z-index:6000;gap:1rem}
+.loading-ov.show{display:flex}
+.loading-ov p{font-family:'Cinzel',serif;color:var(--navy);font-size:.78rem;letter-spacing:.15em}
+.spinner{width:40px;height:40px;border:3px solid var(--tint);border-top-color:var(--blue);border-radius:50%;animation:spin .75s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* LIGHTBOX */
+.lb{display:none;position:fixed;inset:0;background:rgba(0,0,0,.94);z-index:2000;align-items:center;justify-content:center;padding:1rem}
+.lb.open{display:flex}
+.lb-inner{position:relative;max-width:92vw;max-height:92vh}
+.lb-inner img,.lb-inner video{max-width:92vw;max-height:85vh;border-radius:10px;display:block}
+.lb-x{position:fixed;top:1.4rem;right:1.4rem;background:rgba(255,255,255,.15);color:#fff;border:none;border-radius:50%;width:38px;height:38px;font-size:1rem;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s}
+.lb-x:hover{background:rgba(255,255,255,.28)}
+.lb-cap{text-align:center;color:rgba(255,255,255,.72);font-family:'Cinzel',serif;font-size:.68rem;letter-spacing:.1em;margin-top:.8rem}
+
+/* RESPONSIVE */
+@media(max-width:1024px){
+  .nav-links{display:none}
+  .hamburger{display:flex}
+}
+@media(max-width:768px){
+  nav{padding:0 1.2rem}
+  .about-grid{grid-template-columns:1fr;gap:2rem}
+  .join-form{flex-direction:column}
+  .join-card{padding:2.2rem 1.5rem}
+  .admin-header{padding:.8rem 1rem}
+  .admin-tabs{gap:.25rem}
+  section{padding:4rem 1.2rem}
+  .hero-cta{gap:.7rem}
+  .btn{padding:.68rem 1.5rem;font-size:.62rem}
+}
+/* CARD DETAIL MODAL */
+.card-modal-bg{display:none;position:fixed;inset:0;background:rgba(0,27,68,.8);backdrop-filter:blur(10px);z-index:1500;align-items:center;justify-content:center;padding:1rem}
+.card-modal-bg.open{display:flex}
+.card-modal{background:var(--white);border-radius:24px;width:100%;max-width:620px;max-height:90vh;overflow-y:auto;animation:min .3s ease;position:relative;box-shadow:0 40px 100px rgba(0,0,0,.35)}
+.card-modal-img{width:100%;height:280px;object-fit:cover;display:block;border-radius:24px 24px 0 0}
+.card-modal-img-placeholder{width:100%;height:280px;display:flex;align-items:center;justify-content:center;font-size:6rem;border-radius:24px 24px 0 0}
+.card-modal-body{padding:2rem}
+.card-modal-tag{font-family:'Cinzel',serif;font-size:.6rem;letter-spacing:.2em;color:var(--blue);text-transform:uppercase;margin-bottom:.6rem}
+.card-modal-title{font-family:'Tiro Devanagari Nepal',serif;font-size:1.8rem;color:var(--navy);margin-bottom:.3rem;line-height:1.2}
+.card-modal-subtitle{font-family:'Cinzel',serif;font-size:.75rem;letter-spacing:.1em;color:var(--blue);margin-bottom:1.2rem}
+.card-modal-desc{font-size:1.05rem;line-height:1.9;color:var(--gray)}
+.card-modal-badge{display:inline-block;font-family:'Cinzel',serif;font-size:.6rem;letter-spacing:.1em;padding:.28rem .9rem;border-radius:9999px;background:var(--tint);color:var(--blue);text-transform:uppercase;margin-bottom:1rem}
+.card-modal-close{position:absolute;top:1rem;right:1rem;background:rgba(255,255,255,.9);border:none;border-radius:50%;width:36px;height:36px;font-size:1rem;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 10px rgba(0,0,0,.15);transition:all .2s;z-index:2}
+.card-modal-close:hover{background:var(--white);transform:scale(1.1)}
+/* FOOTER SOCIAL */
+.foot-social{display:flex;gap:1rem;justify-content:center;margin-bottom:1.2rem}
+.foot-social a{width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);display:flex;align-items:center;justify-content:center;transition:all .3s;text-decoration:none}
+.foot-social a:hover{background:var(--blue);border-color:var(--blue);transform:translateY(-3px)}
+.foot-social svg{width:18px;height:18px;fill:rgba(255,255,255,.7);transition:fill .3s}
+.foot-social a:hover svg{fill:#fff}
+/* EDIT MODAL */
+.edit-modal-bg{display:none;position:fixed;inset:0;background:rgba(0,27,68,.78);backdrop-filter:blur(8px);z-index:1600;align-items:center;justify-content:center;padding:1rem}
+.edit-modal-bg.open{display:flex}
+.edit-modal{background:var(--white);border-radius:20px;padding:2.2rem;width:100%;max-width:540px;box-shadow:0 30px 80px rgba(0,0,0,.3);position:relative;animation:min .3s ease;max-height:92vh;overflow-y:auto;border-top:4px solid var(--yellow)}
+.edit-modal h2{font-family:'Cinzel',serif;font-size:.95rem;letter-spacing:.1em;color:var(--navy);margin-bottom:1.4rem}
+/* DRAG REORDER */
+.sortable-list{display:flex;flex-direction:column;gap:.7rem}
+.sort-item{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:.85rem 1rem;display:flex;align-items:center;gap:.85rem;cursor:grab;transition:all .2s;user-select:none}
+.sort-item:active{cursor:grabbing}
+.sort-item.dragging{opacity:.35;transform:scale(.97)}
+.sort-item.drag-over{border-color:var(--blue);background:var(--tint);transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,85,255,.12)}
+.sort-handle{font-size:1.1rem;color:var(--gray);flex-shrink:0;cursor:grab;line-height:1}
+.sort-img{width:42px;height:42px;border-radius:8px;object-fit:cover;flex-shrink:0;background:var(--tint);display:flex;align-items:center;justify-content:center;font-size:1.4rem}
+.sort-info{flex:1;min-width:0}
+.sort-title{font-family:'Tiro Devanagari Nepal',serif;font-size:.92rem;color:var(--navy);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sort-sub{font-family:'Cinzel',serif;font-size:.56rem;color:var(--gray);letter-spacing:.07em;margin-top:.1rem}
+.sort-actions{display:flex;gap:.4rem;flex-shrink:0}
+.sort-edit-btn{background:var(--tint);border:1px solid var(--border);border-radius:8px;padding:.3rem .65rem;font-family:'Cinzel',serif;font-size:.54rem;letter-spacing:.07em;cursor:pointer;color:var(--blue);transition:all .2s;text-transform:uppercase}
+.sort-edit-btn:hover{background:var(--blue);color:#fff;border-color:var(--blue)}
+.sort-del-btn{background:#FEE2E2;border:1px solid #FECACA;border-radius:8px;padding:.3rem .65rem;font-family:'Cinzel',serif;font-size:.54rem;cursor:pointer;color:var(--red);transition:all .2s;text-transform:uppercase}
+.sort-del-btn:hover{background:var(--red);color:#fff}
+.sort-order-badge{background:var(--blue);color:#fff;border-radius:50%;width:22px;height:22px;display:flex;align-items:center;justify-content:center;font-family:'Cinzel',serif;font-size:.55rem;font-weight:600;flex-shrink:0}
+@media(max-width:480px){
+  .members-grid{grid-template-columns:repeat(2,1fr)}
+  .fest-grid{grid-template-columns:1fr}
+  .mem-grid{grid-template-columns:1fr}
+  .honours-grid{grid-template-columns:1fr}
+  .hero-title{font-size:2rem}
+  .join-card{padding:2rem 1.2rem}
+  .modal{padding:1.8rem 1.2rem}
+  .card-modal-img,.card-modal-img-placeholder{height:200px}
+  .card-modal-body{padding:1.4rem}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false">
+    <img class="nav-logo-img" src="https://res.cloudinary.com/dblepdhan/image/upload/v1776046116/shree_ganesh_logo-removebg-preview_fxkcdw.png" alt="Logo"/>
+    <div class="nav-logo-text">श्री गणेश बाचनालय<br><span>धिमे: खल</span></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#festivals">Festivals</a></li>
+    <li><a href="#notices">Notices</a></li>
+    <li><a href="#memories">Memories</a></li>
+    <li><a href="#members">Members</a></li>
+    <li><a href="#honours">Honours</a></li>
+    <li><a href="#join">Join</a></li>
+    <li><a href="#" class="nav-admin" onclick="showLogin(event)">Admin</a></li>
+  </ul>
+  <button class="hamburger" onclick="toggleMenu()" id="hamburger">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about" onclick="closeMenu()">About</a>
+  <a href="#festivals" onclick="closeMenu()">Festivals</a>
+  <a href="#notices" onclick="closeMenu()">Notices</a>
+  <a href="#memories" onclick="closeMenu()">Memories</a>
+  <a href="#members" onclick="closeMenu()">Members</a>
+  <a href="#honours" onclick="closeMenu()">Honours</a>
+  <a href="#join" onclick="closeMenu()">Join</a>
+  <a href="#" onclick="closeMenu();showLogin(event)" style="color:var(--blue);border:none;font-weight:600">Admin Login</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-badge">🏮 Newar Youth Club · Balkot, Bhaktapur</div>
+    <div style="margin-bottom:1rem;animation:fu 1s .1s ease both">
+      <img src="https://res.cloudinary.com/dblepdhan/image/upload/v1776046116/shree_ganesh_logo-removebg-preview_fxkcdw.png" alt="Club Logo" style="width:80px;height:80px;object-fit:contain;filter:brightness(0) invert(1) drop-shadow(0 0 18px rgba(255,255,255,.5));animation:logopulse 3s ease-in-out infinite"/>
+    </div>
+    <h1 class="hero-title">श्री गणेश बाचनालय<br>धिमे: <span class="hero-colon">खल</span></h1>
+    <div class="hero-sub">Shree Ganesh Bachnalaya Dhime: Khala</div>
+    <div class="hero-div"></div>
+    <p class="hero-tag">संस्कृति जोगाउनु हाम्रो दायित्व हो, यो हाम्रो पहिचान हो<br>
+      <span style="font-size:.88em;opacity:.72;display:block;margin-top:.3rem">Preserving Newar culture — our heritage, our identity.</span></p>
+    <div class="hero-cta">
+      <a href="#memories" class="btn btn-blue">View Memories</a>
+      <a href="#festivals" class="btn btn-ghost">Our Festivals</a>
+    </div>
+  </div>
+  <div class="scroll-hint"><span>Scroll</span><div class="scroll-line"></div></div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="container">
+    <p class="sec-label">हाम्रो बारेमा</p>
+    <h2 class="sec-title">हाम्रो परिचय</h2>
+    <div class="sec-en">Our Story & Mission</div>
+    <div class="sec-div"></div>
+    <div class="about-grid">
+      <div class="about-text">
+        <p>श्री गणेश बाचनालय धिमे: खल एउटा युवा संगठन हो जसले नेवार समुदायको समृद्ध संस्कृति, परम्परा र पहिचानलाई जोगाउने उद्देश्यले स्थापना गरिएको छ।</p>
+        <p>We are a youth club rooted in the Newar community of Balkot, Bhaktapur — coming together to celebrate, preserve, and share the timeless traditions of our ancestors.</p>
+        <p>Through modern technology and this digital memory archive, we ensure our cultural legacy lives on for every generation that follows.</p>
+      </div>
+      <div class="about-stats">
+        <div class="stat-card"><div class="stat-n">४०+</div><div class="stat-l">सक्रिय सदस्यहरू · Active Members</div></div>
+        <div class="stat-card"><div class="stat-n">१०+</div><div class="stat-l">वार्षिक कार्यक्रमहरू · Annual Events</div></div>
+        <div class="stat-card"><div class="stat-n">∞</div><div class="stat-l">पुस्तौँपुस्ते सम्झना · Generations of Memory</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FESTIVALS -->
+<section class="festivals" id="festivals">
+  <div class="container">
+    <p class="sec-label">हाम्रा चाडपर्वहरू</p>
+    <h2 class="sec-title">हामी मनाउने पर्वहरू</h2>
+    <div class="sec-en">Festivals We Celebrate Together</div>
+    <div class="sec-div"></div>
+    <div class="fest-grid" id="festGrid">
+      <div style="grid-column:1/-1;text-align:center;padding:2rem;color:var(--gray)"><div class="spinner" style="margin:0 auto .8rem"></div><p style="font-style:italic">Loading festivals…</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- NOTICES -->
+<section class="notices" id="notices">
+  <div class="container">
+    <p class="sec-label">सूचनाहरू</p>
+    <h2 class="sec-title">क्लब सूचना</h2>
+    <div class="sec-en">Official Club Notices</div>
+    <div class="sec-div"></div>
+    <p style="text-align:center;font-size:1.05rem;color:var(--gray);max-width:520px;margin:0 auto 2.5rem;line-height:1.9">Important announcements from the club administration, stay informed about upcoming events and activities.</p>
+    <div class="notice-list" id="noticeList">
+      <div style="text-align:center;padding:2rem;color:var(--gray)"><div class="spinner" style="margin:0 auto .8rem"></div><p style="font-style:italic">Loading notices…</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- MEMORIES -->
+<section class="memories" id="memories">
+  <div class="container">
+    <p class="sec-label">सम्झनाहरू</p>
+    <h2 class="sec-title">स्मृति संग्रह</h2>
+    <div class="sec-en">Memories Preserved Forever</div>
+    <div class="sec-div"></div>
+    <p style="text-align:center;font-size:1.05rem;color:var(--gray);max-width:540px;margin:0 auto 2.5rem;line-height:1.9">Every photograph and video is a bridge between the past and the future, preserving our joy and togetherness for generations to come.</p>
+    <div class="folder-tabs" id="folderTabs"></div>
+    <div class="mem-grid" id="memGrid">
+      <div style="grid-column:1/-1;text-align:center;padding:2.5rem;color:var(--gray)"><div class="spinner" style="margin:0 auto 1rem"></div><p style="font-style:italic">Loading memories…</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- MEMBERS -->
+<section class="members" id="members">
+  <div class="container">
+    <p class="sec-label">हाम्रा सदस्यहरू</p>
+    <h2 class="sec-title">क्लबका सदस्यहरू</h2>
+    <div class="sec-en">Our Club Members</div>
+    <div class="sec-div"></div>
+    <p style="text-align:center;font-style:italic;font-size:1.05rem;color:var(--gray);max-width:500px;margin:0 auto 2.5rem;line-height:1.9">The heart of our club — young members who carry our culture forward with pride and passion.</p>
+    <div class="members-grid" id="membersGrid">
+      <div style="grid-column:1/-1;text-align:center;padding:2rem;color:var(--gray)"><div class="spinner" style="margin:0 auto .8rem"></div><p style="font-style:italic">Loading members…</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- HONOURS -->
+<section class="honours" id="honours">
+  <div class="container">
+    <p class="sec-label">सम्मान</p>
+    <h2 class="sec-title">सम्मानित व्यक्तित्वहरू</h2>
+    <div class="sec-en">Honouring Our Community Heroes</div>
+    <div class="sec-div"></div>
+    <p style="text-align:center;font-style:italic;font-size:1.05rem;color:var(--gray);max-width:540px;margin:0 auto 2.5rem;line-height:1.9">We honour those whose contributions — big or small — have made our celebrations possible and our community stronger.</p>
+    <div class="honours-grid" id="honoursGrid">
+      <div style="grid-column:1/-1;text-align:center;padding:2rem;color:var(--gray)"><div class="spinner" style="margin:0 auto .8rem"></div><p style="font-style:italic">Loading…</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- JOIN -->
+<section class="join" id="join">
+  <div class="container">
+    <div class="join-card">
+      <h2>हामीसँग सामेल हुनुहोस्</h2>
+      <h3>Join the Club · Be Part of the Legacy</h3>
+      <p>Whether you want to volunteer, donate, or stay connected — your presence strengthens our community.</p>
+      <div class="join-form">
+        <input type="text" id="joinInput" placeholder="तपाईंको नाम वा इमेल"/>
+        <button class="btn btn-white" onclick="handleJoin()">Join</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="foot-logo">श्री गणेश बाचनालय धिमे: <span>खला</span></div>
+  <div class="foot-tag">Newar Youth Club · Balkot, Bhaktapur · Preserving Culture</div>
+  <div class="foot-social">
+    <a href="https://www.facebook.com" target="_blank" title="Facebook">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+    </a>
+    <a href="https://www.instagram.com" target="_blank" title="Instagram">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+    </a>
+  </div>
+  <p>संस्कृति जोगाउनु हाम्रो दायित्व हो<br>Built with ❤ by the youth of Dhime Khala · Technology in service of tradition.</p>
+</footer>
+
+<!-- LOGIN MODAL -->
+<div class="modal-bg" id="loginModal">
+  <div class="modal">
+    <button class="modal-x" onclick="closeM('loginModal')">✕</button>
+    <h2>Admin Login · प्रशासक लगइन</h2>
+    <div class="fg"><label>Username</label><input type="text" id="lu" placeholder="admin" autocomplete="off"/></div>
+    <div class="fg">
+      <label>Password</label>
+      <input type="password" id="lp" placeholder="••••••••" onkeydown="if(event.key==='Enter')doLogin()"/>
+      <div class="ferr" id="lerr">Incorrect credentials.</div>
+    </div>
+    <button class="btn btn-blue btn-full" onclick="doLogin()">Login</button>
+  </div>
+</div>
+
+<!-- ADMIN PANEL -->
+<div class="admin-panel" id="adminPanel">
+  <div class="admin-header">
+    <h1>Admin · श्री गणेश बाचनालय धिमे: खल</h1>
+    <div class="admin-tabs">
+      <button class="atab active" onclick="switchTab('tabManage',this)">⚙️ Manage & Order</button>
+      <button class="atab" onclick="switchTab('tabFolders',this)">📁 Folders</button>
+      <button class="atab" onclick="switchTab('tabUpload',this)">📸 Upload</button>
+      <button class="atab" onclick="switchTab('tabFestivals',this)">🎊 Festivals</button>
+      <button class="atab" onclick="switchTab('tabMembers',this)">👥 Members</button>
+      <button class="atab" onclick="switchTab('tabHonours',this)">🏅 Honours</button>
+      <button class="atab" onclick="switchTab('tabNotice',this)">📢 Notice</button>
+      <button class="atab" onclick="switchTab('tabAllMedia',this)">🖼 Media</button>
+      <button class="atab" style="border-color:rgba(224,85,85,.5);color:rgba(255,120,120,.9)" onclick="logoutAdmin()">Logout</button>
+    </div>
+  </div>
+  <div class="admin-body">
+
+    <!-- MANAGE & REORDER TAB -->
+    <div class="tab-content active" id="tabManage">
+      <div class="admin-card">
+        <div class="admin-st">🎊 Festivals — Edit & Reorder <span style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:.85rem;color:var(--gray);text-transform:none;letter-spacing:0">Drag ☰ to reorder. First item shows first on website.</span></div>
+        <div class="sortable-list" id="sortFestivals"><p style="color:var(--gray);font-style:italic">Loading…</p></div>
+      </div>
+      <div class="admin-card">
+        <div class="admin-st">👥 Members — Edit & Reorder</div>
+        <div class="sortable-list" id="sortMembers"><p style="color:var(--gray);font-style:italic">Loading…</p></div>
+      </div>
+      <div class="admin-card">
+        <div class="admin-st">🏅 Honours — Edit & Reorder</div>
+        <div class="sortable-list" id="sortHonours"><p style="color:var(--gray);font-style:italic">Loading…</p></div>
+      </div>
+      <div class="admin-card">
+        <div class="admin-st">📁 Memory Folders — Reorder</div>
+        <div class="sortable-list" id="sortFolders"><p style="color:var(--gray);font-style:italic">Loading…</p></div>
+      </div>
+    </div>
+
+    <!-- FOLDERS -->
+    <div class="tab-content" id="tabFolders">
+      <div class="admin-card">
+        <div class="admin-st">📁 Event Folders</div>
+        <div style="display:flex;gap:.8rem;margin-bottom:1.5rem;flex-wrap:wrap">
+          <input type="text" id="newFolderName" placeholder="e.g. Bisket Jatra 2082 / बिस्केट जात्रा २०८२" style="flex:1;min-width:200px;padding:.72rem 1rem;border:1px solid var(--border);border-radius:12px;font-family:'Cormorant Garamond',serif;font-size:.98rem;outline:none"/>
+          <button class="btn btn-blue" onclick="createFolder()">+ Create Folder</button>
+        </div>
+        <div class="folder-list-admin" id="adminFolderList"><p style="color:var(--gray);font-style:italic;grid-column:1/-1">Loading…</p></div>
+      </div>
+    </div>
+
+    <!-- UPLOAD -->
+    <div class="tab-content" id="tabUpload">
+      <div class="admin-card">
+        <div class="admin-st">📸 Upload Photo / Video</div>
+        <div class="fg"><label>Select Folder *</label><select id="uploadFolder"><option value="">-- Select folder --</option></select></div>
+        <div class="fg"><label>Caption (optional)</label><input type="text" id="uploadCaption" placeholder="e.g. Opening ceremony, Group photo…"/></div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem">
+          <div class="fg"><label>Event Date *</label><input type="date" id="uploadDate"/></div>
+          <div class="fg"><label>Event Time (optional)</label><input type="time" id="uploadTime"/></div>
+        </div>
+        <div class="fg"><label>Type</label>
+          <select id="uploadType" onchange="toggleFileAccept()">
+            <option value="photo">📷 Photo</option>
+            <option value="video">🎥 Video</option>
+          </select>
+        </div>
+        <div class="fg">
+          <div class="upload-zone" onclick="document.getElementById('uploadFile').click()" id="uploadZone">
+            <div class="uicon">📷</div><p id="uzText">Click to select photo (JPG, PNG, WEBP)</p>
+          </div>
+          <input type="file" id="uploadFile" accept="image/*" style="display:none" onchange="previewFile(this)"/>
+          <div class="preview-wrap" id="previewWrap"></div>
+          <div class="prog-wrap" id="progWrap"><div class="prog" id="prog"></div></div>
+          <div class="ferr" id="uploadErr">Please fill all required fields and select a file.</div>
+        </div>
+        <button class="btn btn-blue btn-full" id="uploadBtn" onclick="doUpload()">Upload to Memories</button>
+      </div>
+    </div>
+
+    <!-- FESTIVALS ADMIN -->
+    <div class="tab-content" id="tabFestivals">
+      <div class="admin-card">
+        <div class="admin-st">🎊 Add / Edit Festival</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem">
+          <div class="fg"><label>Festival Name (Nepali) *</label><input type="text" id="festNameNp" placeholder="e.g. बिस्केट जात्रा"/></div>
+          <div class="fg"><label>Festival Name (English) *</label><input type="text" id="festNameEn" placeholder="e.g. Bisket Jatra — Nepali New Year"/></div>
+        </div>
+        <div class="fg"><label>Description</label><textarea id="festDesc" placeholder="Describe the festival…"></textarea></div>
+        <div class="fg"><label>Emoji Icon</label><input type="text" id="festEmoji" placeholder="e.g. 🏮 🌈 ⚡ 🌿 🌺 🪔" style="font-size:1.3rem"/></div>
+        <div class="fg">
+          <label>Festival Photo (optional)</label>
+          <div class="upload-zone" onclick="document.getElementById('festPhotoFile').click()">
+            <div class="uicon">🎊</div><p id="festPhotoText">Click to select festival photo</p>
+          </div>
+          <input type="file" id="festPhotoFile" accept="image/*" style="display:none" onchange="previewFestPhoto(this)"/>
+          <div class="preview-wrap" id="festPreviewWrap"></div>
+        </div>
+        <div class="ferr" id="festErr">Please fill festival names.</div>
+        <button class="btn btn-blue btn-full" onclick="addFestival()">Save Festival</button>
+      </div>
+      <div class="admin-card">
+        <div class="admin-st">📋 Current Festivals</div>
+        <div class="fest-admin-grid" id="festAdminGrid"><p style="color:var(--gray);font-style:italic">Loading…</p></div>
+      </div>
+    </div>
+
+    <!-- MEMBERS -->
+    <div class="tab-content" id="tabMembers">
+      <div class="admin-card">
+        <div class="admin-st">👤 Add New Member</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem">
+          <div class="fg"><label>Member Name · नाम *</label><input type="text" id="memName" placeholder="e.g. राजेश महर्जन"/></div>
+          <div class="fg"><label>Role / Position</label><input type="text" id="memRole" placeholder="e.g. President, Member…"/></div>
+        </div>
+        <div class="fg"><label>Gmail Address *</label><input type="email" id="memEmail" placeholder="e.g. member@gmail.com"/></div>
+        <div class="fg">
+          <label>Profile Photo</label>
+          <div class="upload-zone" onclick="document.getElementById('memPhoto').click()">
+            <div class="uicon">👤</div><p id="memPhotoText">Click to select profile photo</p>
+          </div>
+          <input type="file" id="memPhoto" accept="image/*" style="display:none" onchange="previewMember(this)"/>
+          <div class="preview-wrap" id="memPreviewWrap"></div>
+        </div>
+        <button class="btn btn-blue btn-full" onclick="addMember()">Add Member</button>
+      </div>
+      <div class="admin-card">
+        <div class="admin-st">👥 Current Members</div>
+        <div class="member-admin-grid" id="memberAdminGrid"><p style="color:var(--gray);font-style:italic">Loading…</p></div>
+      </div>
+    </div>
+
+    <!-- HONOURS ADMIN -->
+    <div class="tab-content" id="tabHonours">
+      <div class="admin-card">
+        <div class="admin-st">🏅 Add Honoured Person</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem">
+          <div class="fg"><label>Name · नाम *</label><input type="text" id="honourName" placeholder="e.g. राजेश महर्जन"/></div>
+          <div class="fg"><label>Badge / Title</label><input type="text" id="honourBadge" placeholder="e.g. Bisket Jatra 2081 Patron"/></div>
+        </div>
+        <div class="fg"><label>Description of Honourable Moment *</label><textarea id="honourDesc" placeholder="Describe why this person is being honoured, their contribution to the club…" style="min-height:110px"></textarea></div>
+        <div class="fg">
+          <label>Photo of Honoured Person</label>
+          <div class="upload-zone" onclick="document.getElementById('honourPhoto').click()">
+            <div class="uicon">🏅</div><p id="honourPhotoText">Click to select photo</p>
+          </div>
+          <input type="file" id="honourPhoto" accept="image/*" style="display:none" onchange="previewHonour(this)"/>
+          <div class="preview-wrap" id="honourPreviewWrap"></div>
+        </div>
+        <div class="ferr" id="honourErr">Please fill name and description.</div>
+        <button class="btn btn-blue btn-full" onclick="addHonour()">Add to Honours</button>
+      </div>
+      <div class="admin-card">
+        <div class="admin-st">🏆 Current Honours</div>
+        <div class="honour-admin-grid" id="honourAdminGrid"><p style="color:var(--gray);font-style:italic">Loading…</p></div>
+      </div>
+    </div>
+
+    <!-- NOTICE -->
+    <div class="tab-content" id="tabNotice">
+      <div class="admin-card">
+        <div class="admin-st">📢 Send Notice to All Members</div>
+        <div style="background:var(--tint);border:1px solid var(--border);border-radius:12px;padding:1rem 1.2rem;margin-bottom:1.4rem;font-size:.92rem;color:var(--gray);line-height:1.7">
+          ℹ️ This will send an email to every member's Gmail instantly.
+        </div>
+        <div class="fg"><label>Notice Title *</label><input type="text" id="noticeTitle" placeholder="e.g. Bisket Jatra 2082 — Important Notice"/></div>
+        <div class="fg"><label>Message *</label><textarea id="noticeMsg" placeholder="Write your notice message…" style="min-height:130px"></textarea></div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem">
+          <div class="fg"><label>Event Date (optional)</label><input type="date" id="noticeDate"/></div>
+          <div class="fg"><label>Event Time (optional)</label><input type="time" id="noticeTime"/></div>
+        </div>
+        <div class="ferr" id="noticeErr">Please fill title and message.</div>
+        <button class="btn btn-blue btn-full" id="noticeBtn" onclick="sendNotice()">📧 Send to All Members</button>
+        <div id="noticeProgress" style="margin-top:1rem;display:none">
+          <div class="prog-wrap" style="display:block"><div class="prog" id="noticeProgBar"></div></div>
+          <p id="noticeProgressText" style="font-family:'Cinzel',serif;font-size:.65rem;color:var(--blue);margin-top:.5rem;letter-spacing:.1em;text-align:center"></p>
+        </div>
+      </div>
+      <div class="admin-card">
+        <div class="admin-st">📋 Sent Notices</div>
+        <div class="notice-admin-list" id="noticeAdminList"><p style="color:var(--gray);font-style:italic">Loading…</p></div>
+      </div>
+    </div>
+
+    <!-- ALL MEDIA -->
+    <div class="tab-content" id="tabAllMedia">
+      <div class="admin-card">
+        <div class="admin-st">🖼 All Uploaded Media</div>
+        <div class="admin-media-grid" id="allMediaGrid"><p style="color:var(--gray);font-style:italic;grid-column:1/-1">Loading…</p></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- EDIT MODAL -->
+<div class="edit-modal-bg" id="editModal" onclick="if(event.target===this)closeEditModal()">
+  <div class="edit-modal">
+    <button class="modal-x" onclick="closeEditModal()">✕</button>
+    <h2 id="editModalTitle">✏️ Edit</h2>
+    <div id="editModalFields"></div>
+    <div style="display:flex;gap:.7rem;margin-top:1.2rem">
+      <button class="btn btn-blue btn-full" id="editSaveBtn" onclick="saveEdit()">Save Changes</button>
+      <button class="btn btn-outline" style="min-width:90px" onclick="closeEditModal()">Cancel</button>
+    </div>
+  </div>
+</div>
+
+<!-- CARD DETAIL MODAL -->
+<div class="card-modal-bg" id="cardModal" onclick="if(event.target===this)closeCardModal()">
+  <div class="card-modal" id="cardModalInner">
+    <button class="card-modal-close" onclick="closeCardModal()">✕</button>
+    <div id="cardModalContent"></div>
+  </div>
+</div>
+
+<!-- LIGHTBOX -->
+<div class="lb" id="lb" onclick="if(event.target===this)closeLB()">
+  <button class="lb-x" onclick="closeLB()">✕</button>
+  <div class="lb-inner"><div id="lbContent"></div><div class="lb-cap" id="lbCap"></div></div>
+</div>
+
+<div class="toast" id="toast"></div>
+<div class="loading-ov" id="loadOv"><div class="spinner"></div><p id="loadMsg">Loading…</p></div>
+
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.0/firebase-app.js";
+import { getFirestore, collection, addDoc, getDocs, deleteDoc, doc, orderBy, query, setDoc, getDoc } from "https://www.gstatic.com/firebasejs/11.0.0/firebase-firestore.js";
+
+const FB={apiKey:"AIzaSyAN3Xj7p83urLt3UrV3nof8cb_FOjuBhTk",authDomain:"ganesh-bachnalaya.firebaseapp.com",projectId:"ganesh-bachnalaya",storageBucket:"ganesh-bachnalaya.firebasestorage.app",messagingSenderId:"934871136054",appId:"1:934871136054:web:4e049014ddd037b52f2597"};
+const CLOUD="dblepdhan",PRESET="ganesh-uploads";
+const ADMIN_U="admin",ADMIN_P="ganesh2081";
+const EJS_SVC="service_ddfsf2t",EJS_TPL="template_v2pp94l",EJS_KEY="FHxvu3mZRo0SrweaV";
+
+emailjs.init(EJS_KEY);
+const app=initializeApp(FB);
+const db=getFirestore(app);
+const $=id=>document.getElementById(id);
+const toast=msg=>{const t=$('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),4000);};
+const showLoad=msg=>{$('loadMsg').textContent=msg||'Loading…';$('loadOv').classList.add('show');};
+const hideLoad=()=>$('loadOv').classList.remove('show');
+window.closeM=id=>$(id).classList.remove('open');
+
+/* MOBILE MENU */
+window.toggleMenu=()=>{
+  const m=$('mobileMenu');m.classList.toggle('open');
+};
+window.closeMenu=()=>$('mobileMenu').classList.remove('open');
+
+/* DATE FORMAT */
+function fmtDate(s){
+  if(!s)return'';
+  const d=new Date(s+'T00:00:00');
+  return d.toLocaleDateString('en-GB',{year:'numeric',month:'long',day:'numeric'});
+}
+function fmtTime(t){
+  if(!t)return'';
+  const [h,m]=t.split(':');
+  const hr=parseInt(h);
+  const ampm=hr>=12?'PM':'AM';
+  const h12=hr%12||12;
+  return `${h12}:${m} ${ampm}`;
+}
+
+/* LOGIN */
+window.showLogin=e=>{e.preventDefault();$('loginModal').classList.add('open');};
+window.doLogin=()=>{
+  if($('lu').value.trim()===ADMIN_U&&$('lp').value===ADMIN_P){
+    $('lerr').style.display='none';window.closeM('loginModal');
+    $('adminPanel').classList.add('open');$('lu').value='';$('lp').value='';
+    loadAdminFolders();loadAdminMembers();loadAllMedia();loadNoticeHistory();loadFestAdminGrid();loadHonourAdminGrid();
+    loadManageTab();
+  }else{$('lerr').style.display='block';}
+};
+window.logoutAdmin=()=>{$('adminPanel').classList.remove('open');toast('Logged out. 🙏');};
+window.switchTab=(id,btn)=>{
+  document.querySelectorAll('.tab-content').forEach(t=>t.classList.remove('active'));
+  document.querySelectorAll('.atab').forEach(b=>b.classList.remove('active'));
+  $(id).classList.add('active');btn.classList.add('active');
+  if(id==='tabUpload')populateFolderSelect();
+  if(id==='tabManage')loadManageTab();
+};
+
+/* CLOUDINARY */
+async function uploadCDN(file,onProg){
+  const isVid=file.type.startsWith('video/');
+  const fd=new FormData();fd.append('file',file);fd.append('upload_preset',PRESET);fd.append('folder','ganesh');
+  return new Promise((res,rej)=>{
+    const xhr=new XMLHttpRequest();
+    xhr.open('POST',`https://api.cloudinary.com/v1_1/${CLOUD}/${isVid?'video':'image'}/upload`);
+    xhr.upload.onprogress=e=>{if(e.lengthComputable)onProg(Math.round(e.loaded/e.total*100));};
+    xhr.onload=()=>{const r=JSON.parse(xhr.responseText);r.secure_url?res(r):rej(new Error(r.error?.message||'Upload failed'));};
+    xhr.onerror=()=>rej(new Error('Network error'));xhr.send(fd);
+  });
+}
+
+/* FOLDERS */
+async function getFolders(){try{const s=await getDocs(collection(db,'folders'));return s.docs.map(d=>({id:d.id,...d.data()}));}catch(e){return[];}}
+window.createFolder=async()=>{
+  const name=$('newFolderName').value.trim();if(!name){toast('Enter folder name.');return;}
+  showLoad('Creating…');
+  try{await addDoc(collection(db,'folders'),{name,createdAt:new Date().toISOString()});$('newFolderName').value='';hideLoad();toast('✓ Folder: '+name);loadAdminFolders();renderPublicFolderTabs();populateFolderSelect();}
+  catch(e){hideLoad();toast('Error: '+e.message);}
+};
+window.deleteFolder=async(id,name)=>{
+  if(!confirm(`Delete folder "${name}"?`))return;showLoad('Deleting…');
+  try{await deleteDoc(doc(db,'folders',id));hideLoad();toast('Folder deleted.');loadAdminFolders();renderPublicFolderTabs();}
+  catch(e){hideLoad();toast('Error: '+e.message);}
+};
+async function loadAdminFolders(){
+  const list=$('adminFolderList');const folders=await getFolders();
+  if(!folders.length){list.innerHTML='<p style="color:var(--gray);font-style:italic;grid-column:1/-1">No folders yet.</p>';return;}
+  list.innerHTML=folders.map(f=>`<div class="folder-item"><span style="font-size:1.4rem">📁</span><div><div class="folder-name-txt">${f.name}</div></div><button class="folder-del" onclick="deleteFolder('${f.id}','${f.name}')">🗑</button></div>`).join('');
+}
+async function populateFolderSelect(){
+  const sel=$('uploadFolder');const folders=await getFolders();
+  sel.innerHTML='<option value="">-- Select folder --</option>'+folders.map(f=>`<option value="${f.name}">${f.name}</option>`).join('');
+}
+
+/* UPLOAD */
+window.toggleFileAccept=()=>{
+  const isVid=$('uploadType').value==='video';
+  $('uploadFile').accept=isVid?'video/*':'image/*';
+  $('uzText').textContent=isVid?'Click to select video (MP4, MOV)':'Click to select photo (JPG, PNG, WEBP)';
+  $('uploadZone').querySelector('.uicon').textContent=isVid?'🎥':'📷';
+  $('previewWrap').style.display='none';$('previewWrap').innerHTML='';$('uploadFile').value='';
+};
+window.previewFile=inp=>{
+  const f=inp.files[0];if(!f)return;
+  const wrap=$('previewWrap');wrap.style.display='block';
+  const url=URL.createObjectURL(f);
+  wrap.innerHTML=f.type.startsWith('video/')?`<video src="${url}" controls style="width:100%;max-height:200px;border-radius:10px"></video>`:`<img src="${url}" style="width:100%;max-height:200px;object-fit:cover;border-radius:10px"/>`;
+  $('uzText').textContent=f.name;
+};
+window.doUpload=async()=>{
+  const folder=$('uploadFolder').value,caption=$('uploadCaption').value.trim();
+  const date=$('uploadDate').value,time=$('uploadTime').value;
+  const type=$('uploadType').value,file=$('uploadFile').files[0];
+  if(!folder||!date||!file){$('uploadErr').style.display='block';return;}
+  $('uploadErr').style.display='none';showLoad('Uploading… 0%');$('uploadBtn').disabled=true;$('progWrap').style.display='block';
+  try{
+    const res=await uploadCDN(file,pct=>{$('prog').style.width=pct+'%';$('loadMsg').textContent=`Uploading… ${pct}%`;});
+    $('loadMsg').textContent='Saving…';
+    await addDoc(collection(db,'media'),{folder,caption,date,time,type,url:res.secure_url,publicId:res.public_id,addedAt:new Date().toISOString()});
+    hideLoad();$('uploadBtn').disabled=false;$('prog').style.width='0%';$('progWrap').style.display='none';
+    $('uploadCaption').value='';$('uploadDate').value='';$('uploadTime').value='';$('uploadFile').value='';
+    $('previewWrap').style.display='none';$('previewWrap').innerHTML='';$('uzText').textContent='Click to select photo (JPG, PNG, WEBP)';
+    toast(`✓ Uploaded to "${folder}"! 🙏`);loadAllMedia();renderPublicFolderTabs();
+  }catch(e){hideLoad();$('uploadBtn').disabled=false;$('progWrap').style.display='none';toast('Error: '+e.message);}
+};
+async function loadAllMedia(){
+  const grid=$('allMediaGrid');
+  try{
+    const snap=await getDocs(query(collection(db,'media'),orderBy('addedAt','desc')));
+    const items=snap.docs.map(d=>({id:d.id,...d.data()}));
+    if(!items.length){grid.innerHTML='<p style="color:var(--gray);font-style:italic;grid-column:1/-1">No media yet.</p>';return;}
+    grid.innerHTML=items.map(m=>`
+      <div class="admin-media-item">
+        ${m.type==='video'?`<video src="${m.url}" style="width:100%;height:125px;object-fit:cover" preload="metadata" muted></video>`:`<img src="${m.url}" alt="${m.folder}"/>`}
+        <span class="type-pill ${m.type==='video'?'pill-v':'pill-p'}">${m.type==='video'?'🎥':'📷'}</span>
+        <div class="admin-media-info"><div class="ami-event">${m.folder}</div><div class="ami-date">${m.caption?m.caption+' · ':''}${fmtDate(m.date)}${m.time?' · '+fmtTime(m.time):''}</div></div>
+        <button class="del-btn" onclick="deleteMedia('${m.id}')">✕</button>
+      </div>`).join('');
+  }catch(e){grid.innerHTML='<p style="color:var(--red);grid-column:1/-1">Error. Check Firebase rules.</p>';}
+}
+window.deleteMedia=async id=>{
+  if(!confirm('Delete?'))return;showLoad('Deleting…');
+  try{await deleteDoc(doc(db,'media',id));hideLoad();toast('Deleted.');loadAllMedia();renderPublicFolderTabs();}
+  catch(e){hideLoad();toast('Error: '+e.message);}
+};
+
+/* PUBLIC MEMORIES */
+let allMedia=[],activeFolder='all';
+async function renderPublicFolderTabs(){
+  const tabsEl=$('folderTabs'),grid=$('memGrid');
+  try{
+    const [fSnap,mSnap]=await Promise.all([getDocs(collection(db,'folders')),getDocs(query(collection(db,'media'),orderBy('addedAt','desc')))]);
+    const folders=fSnap.docs.map(d=>({id:d.id,...d.data()}));
+    allMedia=mSnap.docs.map(d=>({id:d.id,...d.data()}));
+    if(!folders.length&&!allMedia.length){tabsEl.innerHTML='';grid.innerHTML=`<div class="empty-sec"><div style="font-size:3rem">📸</div><p>No memories yet — check back after the next event!</p></div>`;return;}
+    tabsEl.innerHTML=[{name:'All',value:'all'},...folders.map(f=>({name:f.name,value:f.name}))].map(t=>`<div class="folder-tab ${t.value===activeFolder?'active':''}" onclick="filterFolder('${t.value}')">${t.value==='all'?'🗂 All':('📁 '+t.name)}</div>`).join('');
+    renderFilteredMedia();
+  }catch(e){grid.innerHTML=`<div class="empty-sec"><p>⚠️ Could not load. Check Firebase rules.</p></div>`;}
+}
+function renderFilteredMedia(){
+  const grid=$('memGrid');
+  const filtered=activeFolder==='all'?allMedia:allMedia.filter(m=>m.folder===activeFolder);
+  if(!filtered.length){grid.innerHTML=`<div class="empty-sec"><div style="font-size:2.5rem">📂</div><p>No memories in this folder yet.</p></div>`;return;}
+  grid.innerHTML=filtered.map(m=>`
+    <div class="mem-card" onclick="openLB('${m.url}','${m.type}','${(m.caption||m.folder).replace(/'/g,"\\'")}')">
+      ${m.type==='video'?`<div class="vid-wrap"><video src="${m.url}" preload="metadata" muted></video><div class="vid-play">▶</div></div>`:`<img class="mem-thumb" src="${m.url}" alt="${m.caption||m.folder}" loading="lazy"/>`}
+      <div class="mem-info">
+        <div class="mem-event">${m.folder}</div>
+        ${m.caption?`<div style="font-size:.9rem;color:var(--gray);margin-top:.1rem;font-style:italic">${m.caption}</div>`:''}
+        <div class="mem-meta">
+          ${m.date?`<span class="mem-meta-item">📅 <strong>Event Date:</strong> ${fmtDate(m.date)}</span>`:''}
+          ${m.time?`<span class="mem-meta-item">🕐 <strong>Event Time:</strong> ${fmtTime(m.time)}</span>`:''}
+          <span class="mem-badge ${m.type==='video'?'badge-v':'badge-p'}">${m.type==='video'?'🎥 Video':'📷 Photo'}</span>
+        </div>
+      </div>
+    </div>`).join('');
+  setTimeout(()=>{grid.querySelectorAll('.mem-card').forEach((el,i)=>{el.style.opacity='0';el.style.transform='translateY(14px)';el.style.transition='opacity .45s,transform .45s';setTimeout(()=>{el.style.opacity='1';el.style.transform='translateY(0)';},i*60);});},30);
+}
+window.filterFolder=val=>{
+  activeFolder=val;
+  document.querySelectorAll('.folder-tab').forEach(t=>{t.classList.toggle('active',t.textContent.includes(val==='all'?'All':val));});
+  renderFilteredMedia();
+};
+
+/* FESTIVALS */
+window.previewFestPhoto=inp=>{
+  const f=inp.files[0];if(!f)return;
+  const wrap=$('festPreviewWrap');wrap.style.display='block';
+  wrap.innerHTML=`<img src="${URL.createObjectURL(f)}" style="width:100%;max-height:180px;object-fit:cover;border-radius:10px"/>`;
+  $('festPhotoText').textContent=f.name;
+};
+window.addFestival=async()=>{
+  const nameNp=$('festNameNp').value.trim(),nameEn=$('festNameEn').value.trim();
+  const desc=$('festDesc').value.trim(),emoji=$('festEmoji').value.trim();
+  const file=$('festPhotoFile').files[0];
+  if(!nameNp||!nameEn){$('festErr').style.display='block';return;}
+  $('festErr').style.display='none';showLoad('Saving festival…');
+  try{
+    let photoUrl='';
+    if(file){const res=await uploadCDN(file,()=>{});photoUrl=res.secure_url;}
+    await addDoc(collection(db,'festivals'),{nameNp,nameEn,desc,emoji,photoUrl,addedAt:new Date().toISOString()});
+    $('festNameNp').value='';$('festNameEn').value='';$('festDesc').value='';$('festEmoji').value='';
+    $('festPhotoFile').value='';$('festPreviewWrap').style.display='none';$('festPreviewWrap').innerHTML='';$('festPhotoText').textContent='Click to select festival photo';
+    hideLoad();toast('✓ Festival saved!');loadFestAdminGrid();renderPublicFestivals();
+  }catch(e){hideLoad();toast('Error: '+e.message);}
+};
+window.deleteFestival=async id=>{
+  if(!confirm('Delete this festival?'))return;showLoad('Deleting…');
+  try{await deleteDoc(doc(db,'festivals',id));hideLoad();toast('Festival deleted.');loadFestAdminGrid();renderPublicFestivals();}
+  catch(e){hideLoad();toast('Error: '+e.message);}
+};
+async function getFestivals(){
+  try{
+    const s=await getDocs(collection(db,'festivals'));
+    return s.docs.map(d=>({id:d.id,...d.data()})).sort((a,b)=>(a.order??999)-(b.order??999));
+  }catch(e){return[];}
+}
+async function loadFestAdminGrid(){
+  const grid=$('festAdminGrid');const items=await getFestivals();
+  if(!items.length){grid.innerHTML='<p style="color:var(--gray);font-style:italic">No festivals yet. Add your first one above!</p>';return;}
+  grid.innerHTML=items.map(f=>`
+    <div class="fest-admin-item">
+      ${f.photoUrl?`<img src="${f.photoUrl}" alt="${f.nameNp}"/>`:`<div style="width:100%;height:110px;background:linear-gradient(135deg,var(--navy),var(--blue));display:flex;align-items:center;justify-content:center;font-size:3rem">${f.emoji||'🎊'}</div>`}
+      <div class="fest-admin-info">
+        <div class="fai-title">${f.nameNp}</div>
+        <div class="fai-sub">${f.nameEn}</div>
+      </div>
+      <button class="del-btn" onclick="deleteFestival('${f.id}')">✕</button>
+    </div>`).join('');
+}
+const defaultFestivals=[
+  {id:'d1',nameNp:'बिस्केट जात्रा',nameEn:'Bisket Jatra — Nepali New Year',desc:'The grand chariot festival of Bhaktapur marking the Nepali New Year — 12 days of processions and traditional music.',emoji:'🏮',photoUrl:'',bg:'bg1'},
+  {id:'d2',nameNp:'होली',nameEn:'Holi — Festival of Colours',desc:'The vibrant festival of colours — throwing colours, singing folk songs, and strengthening community bonds.',emoji:'🌈',photoUrl:'',bg:'bg2'},
+  {id:'d3',nameNp:'इन्द्रजात्रा',nameEn:'Indra Jatra — Festival of Indra',desc:'One of the grandest festivals of Kathmandu Valley with Kumari chariot procession and masked dances.',emoji:'⚡',photoUrl:'',bg:'bg3'},
+  {id:'d4',nameNp:'गठेमंगल',nameEn:'Gathemangal — Ancient Newar Tradition',desc:'The ancient Newar tradition of warding off demons — kept alive through storytelling and cultural programmes.',emoji:'🌿',photoUrl:'',bg:'bg4'},
+  {id:'d5',nameNp:'दशैं',nameEn:'Dashain — Vijaya Dashami',desc:'Fifteen days of worship, blessings, and family reunion with tika and jamara from elders.',emoji:'🌺',photoUrl:'',bg:'bg5'},
+  {id:'d6',nameNp:'तिहार',nameEn:'Tihar — Festival of Lights',desc:'Five days of light and devotion — every street lit with thousands of diyo, filling hearts with warmth.',emoji:'🪔',photoUrl:'',bg:'bg6'}
+];
+let festivalData = [];
+let honourData = [];
+
+async function renderPublicFestivals(){
+  const grid=$('festGrid');
+  let items=await getFestivals();
+  if(!items.length)items=defaultFestivals;
+  festivalData = items;
+  const bgs=['bg1','bg2','bg3','bg4','bg5','bg6'];
+  grid.innerHTML=items.map((f,i)=>`
+    <div class="fest-card" data-festidx="${i}" style="opacity:0;transform:translateY(16px);transition:opacity .5s ${i*0.08}s,transform .5s ${i*0.08}s">
+      ${f.photoUrl?`<div style="overflow:hidden;height:175px"><img class="fest-img-real" src="${f.photoUrl}" alt="${f.nameNp}"/></div>`:`<div class="fest-img ${f.bg||bgs[i%6]}">${f.emoji||'🎊'}</div>`}
+      <div class="fest-body"><h3>${f.nameNp}</h3><h4>${f.nameEn}</h4><p>${f.desc||''}</p></div>
+    </div>`).join('');
+  setTimeout(()=>{
+    grid.querySelectorAll('.fest-card').forEach(el=>{
+      el.style.opacity='1';el.style.transform='translateY(0)';
+      el.addEventListener('click',()=>openFestModal(festivalData[parseInt(el.dataset.festidx)]));
+    });
+  },50);
+}
+
+/* MEMBERS */
+window.previewMember=inp=>{
+  const f=inp.files[0];if(!f)return;
+  const wrap=$('memPreviewWrap');wrap.style.display='block';
+  wrap.innerHTML=`<img src="${URL.createObjectURL(f)}" style="width:80px;height:80px;border-radius:50%;object-fit:cover;display:block;margin:.6rem auto;border:3px solid var(--tint)"/>`;
+  $('memPhotoText').textContent=f.name;
+};
+async function getMembers(){
+  try{
+    const s=await getDocs(collection(db,'members'));
+    return s.docs.map(d=>({id:d.id,...d.data()})).sort((a,b)=>(a.order??999)-(b.order??999));
+  }catch(e){return[];}
+}window.addMember=async()=>{
+  const name=$('memName').value.trim(),role=$('memRole').value.trim(),email=$('memEmail').value.trim(),file=$('memPhoto').files[0];
+  if(!name||!email){toast('Please enter name and email.');return;}
+  showLoad('Adding member…');
+  try{
+    let photoUrl='';if(file){const res=await uploadCDN(file,()=>{});photoUrl=res.secure_url;}
+    await addDoc(collection(db,'members'),{name,role,email,photoUrl,addedAt:new Date().toISOString()});
+    $('memName').value='';$('memRole').value='';$('memEmail').value='';
+    $('memPhoto').value='';$('memPreviewWrap').style.display='none';$('memPreviewWrap').innerHTML='';$('memPhotoText').textContent='Click to select profile photo';
+    hideLoad();toast('✓ Member added!');loadAdminMembers();renderPublicMembers();
+  }catch(e){hideLoad();toast('Error: '+e.message);}
+};
+window.deleteMember=async id=>{
+  if(!confirm('Remove member?'))return;showLoad('Removing…');
+  try{await deleteDoc(doc(db,'members',id));hideLoad();toast('Member removed.');loadAdminMembers();renderPublicMembers();}
+  catch(e){hideLoad();toast('Error: '+e.message);}
+};
+async function loadAdminMembers(){
+  const grid=$('memberAdminGrid');const members=await getMembers();
+  if(!members.length){grid.innerHTML='<p style="color:var(--gray);font-style:italic">No members yet.</p>';return;}
+  grid.innerHTML=members.map(m=>`
+    <div class="member-admin-item">
+      ${m.photoUrl?`<img src="${m.photoUrl}" alt="${m.name}"/>`:`<div style="width:54px;height:54px;border-radius:50%;background:linear-gradient(135deg,var(--blue),var(--navy));display:flex;align-items:center;justify-content:center;color:#fff;font-family:'Cinzel',serif;font-size:1.1rem;margin:0 auto .5rem">${m.name[0]}</div>`}
+      <div class="mai-name">${m.name}</div><div class="mai-role">${m.role||'Member'}</div>
+      <div class="mai-email">📧 ${m.email}</div>
+      <button class="del-btn" style="position:static;margin:.5rem auto 0;display:flex" onclick="deleteMember('${m.id}')">✕</button>
+    </div>`).join('');
+}
+async function renderPublicMembers(){
+  const grid=$('membersGrid');const members=await getMembers();
+  if(!members.length){grid.innerHTML=`<div style="grid-column:1/-1;text-align:center;padding:2rem;color:var(--gray);font-style:italic">Members will appear here once added by admin.</div>`;return;}
+  grid.innerHTML=members.map(m=>`
+    <div class="member-card" style="opacity:0;transform:translateY(14px);transition:opacity .45s,transform .45s">
+      ${m.photoUrl
+        ?`<div class="member-avatar-wrap"><img class="member-avatar" src="${m.photoUrl}" alt="${m.name}"/></div>`
+        :`<div style="display:flex;justify-content:center"><div class="member-av-ph">${m.name[0]}</div></div>`}
+      <div class="member-name">${m.name}</div>
+      <div class="member-role">${m.role||'Member'}</div>
+    </div>`).join('');
+  setTimeout(()=>{grid.querySelectorAll('.member-card').forEach((el,i)=>{setTimeout(()=>{el.style.opacity='1';el.style.transform='translateY(0)';},i*60);});},30);
+}
+
+/* HONOURS */
+window.previewHonour=inp=>{
+  const f=inp.files[0];if(!f)return;
+  const wrap=$('honourPreviewWrap');wrap.style.display='block';
+  wrap.innerHTML=`<img src="${URL.createObjectURL(f)}" style="width:100%;max-height:180px;object-fit:cover;border-radius:10px"/>`;
+  $('honourPhotoText').textContent=f.name;
+};
+window.addHonour=async()=>{
+  const name=$('honourName').value.trim(),badge=$('honourBadge').value.trim(),desc=$('honourDesc').value.trim(),file=$('honourPhoto').files[0];
+  if(!name||!desc){$('honourErr').style.display='block';return;}
+  $('honourErr').style.display='none';showLoad('Saving…');
+  try{
+    let photoUrl='';if(file){const res=await uploadCDN(file,()=>{});photoUrl=res.secure_url;}
+    await addDoc(collection(db,'honours'),{name,badge,desc,photoUrl,addedAt:new Date().toISOString()});
+    $('honourName').value='';$('honourBadge').value='';$('honourDesc').value='';
+    $('honourPhoto').value='';$('honourPreviewWrap').style.display='none';$('honourPreviewWrap').innerHTML='';$('honourPhotoText').textContent='Click to select photo';
+    hideLoad();toast('✓ Honour added!');loadHonourAdminGrid();renderPublicHonours();
+  }catch(e){hideLoad();toast('Error: '+e.message);}
+};
+window.deleteHonour=async id=>{
+  if(!confirm('Delete this honour?'))return;showLoad('Deleting…');
+  try{await deleteDoc(doc(db,'honours',id));hideLoad();toast('Deleted.');loadHonourAdminGrid();renderPublicHonours();}
+  catch(e){hideLoad();toast('Error: '+e.message);}
+};
+async function getHonours(){
+  try{
+    const s=await getDocs(collection(db,'honours'));
+    return s.docs.map(d=>({id:d.id,...d.data()})).sort((a,b)=>(a.order??999)-(b.order??999));
+  }catch(e){return[];}
+}async function loadHonourAdminGrid(){
+  const grid=$('honourAdminGrid');const items=await getHonours();
+  if(!items.length){grid.innerHTML='<p style="color:var(--gray);font-style:italic">No honours yet.</p>';return;}
+  grid.innerHTML=items.map(h=>`
+    <div class="honour-admin-item">
+      ${h.photoUrl?`<img src="${h.photoUrl}" alt="${h.name}"/>`:`<div class="honour-img-ph">🏅</div>`}
+      <div class="honour-admin-info"><div class="hai-name">${h.name}</div><div class="hai-desc">${h.desc.substring(0,80)}${h.desc.length>80?'…':''}</div></div>
+      <button class="del-btn" onclick="deleteHonour('${h.id}')">✕</button>
+    </div>`).join('');
+}
+async function renderPublicHonours(){
+  const grid=$('honoursGrid');const items=await getHonours();
+  honourData = items;
+  if(!items.length){
+    grid.innerHTML=`<div class="empty-sec" style="grid-column:1/-1"><div style="font-size:3rem">🏅</div><p>Honours will appear here once added by admin.</p></div>`;
+    return;
+  }
+  grid.innerHTML=items.map((h,i)=>`
+    <div class="honour-card" data-honouridx="${i}" style="opacity:0;transform:translateY(14px);transition:opacity .45s,transform .45s">
+      <div style="overflow:hidden;height:200px">${h.photoUrl?`<img class="honour-img" src="${h.photoUrl}" alt="${h.name}"/>`:`<div class="honour-img-ph">🏅</div>`}</div>
+      <div class="honour-body">
+        <div class="honour-name">${h.name}</div>
+        ${h.badge?`<div class="honour-badge">${h.badge}</div>`:''}
+        <div class="honour-desc">${h.desc}</div>
+      </div>
+    </div>`).join('');
+  setTimeout(()=>{
+    grid.querySelectorAll('.honour-card').forEach((el,i)=>{
+      setTimeout(()=>{el.style.opacity='1';el.style.transform='translateY(0)';},i*80);
+      el.addEventListener('click',()=>openHonourModal(honourData[parseInt(el.dataset.honouridx)]));
+    });
+  },30);
+}
+
+/* NOTICES */
+window.sendNotice=async()=>{
+  const title=$('noticeTitle').value.trim(),msg=$('noticeMsg').value.trim();
+  const date=$('noticeDate').value,time=$('noticeTime').value;
+  if(!title||!msg){$('noticeErr').style.display='block';return;}
+  $('noticeErr').style.display='none';
+  const members=await getMembers();const withEmail=members.filter(m=>m.email);
+  if(!withEmail.length){toast('⚠️ No members with email found.');return;}
+  $('noticeBtn').disabled=true;$('noticeProgress').style.display='block';
+  let sent=0,failed=0;
+  for(let i=0;i<withEmail.length;i++){
+    const m=withEmail[i];
+    $('noticeProgBar').style.width=Math.round((i/withEmail.length)*100)+'%';
+    $('noticeProgressText').textContent=`Sending to ${m.name}… (${i+1}/${withEmail.length})`;
+    try{
+      await emailjs.send(EJS_SVC,EJS_TPL,{
+        to_email:m.email,member_name:m.name,
+        subject:title,
+        message:msg+(date?'\n\nEvent Date: '+fmtDate(date):'')+(time?'\nEvent Time: '+fmtTime(time):'')
+      });
+      sent++;
+    }catch(e){failed++;console.error('Failed:',m.name,e);}
+    await new Promise(r=>setTimeout(r,300));
+  }
+  $('noticeProgBar').style.width='100%';
+  $('noticeProgressText').textContent=`✓ Done! Sent: ${sent}${failed?', Failed: '+failed:''}`;
+  try{await addDoc(collection(db,'notices'),{title,message:msg,date,time,sentTo:sent,failed,sentAt:new Date().toISOString()});}catch(e){}
+  $('noticeBtn').disabled=false;
+  $('noticeTitle').value='';$('noticeMsg').value='';$('noticeDate').value='';$('noticeTime').value='';
+  toast(`✓ Notice sent to ${sent} members! 📧`);loadNoticeHistory();renderPublicNotices();
+  setTimeout(()=>{$('noticeProgress').style.display='none';$('noticeProgBar').style.width='0%';},5000);
+};
+async function loadNoticeHistory(){
+  const list=$('noticeAdminList');
+  try{
+    const snap=await getDocs(query(collection(db,'notices'),orderBy('sentAt','desc')));
+    const items=snap.docs.map(d=>({id:d.id,...d.data()}));
+    if(!items.length){list.innerHTML='<p style="color:var(--gray);font-style:italic">No notices sent yet.</p>';return;}
+    list.innerHTML=items.map(n=>`
+      <div class="notice-admin-item">
+        <div style="flex:1">
+          <div class="nai-title">${n.title}</div>
+          <div class="nai-msg">${n.message.substring(0,100)}${n.message.length>100?'…':''}</div>
+          <div class="nai-date">${new Date(n.sentAt).toLocaleDateString('en-GB',{year:'numeric',month:'long',day:'numeric',hour:'2-digit',minute:'2-digit'})}</div>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:flex-end;gap:.4rem;flex-shrink:0">
+          <span class="email-status status-sent">✓ ${n.sentTo} sent</span>
+          <button class="btn btn-red btn-sm" onclick="deleteNotice('${n.id}')">Delete</button>
+        </div>
+      </div>`).join('');
+  }catch(e){list.innerHTML='<p style="color:var(--gray);font-style:italic">No notices yet.</p>';}
+}
+window.deleteNotice=async id=>{
+  if(!confirm('Delete?'))return;showLoad('Deleting…');
+  try{await deleteDoc(doc(db,'notices',id));hideLoad();toast('Deleted.');loadNoticeHistory();renderPublicNotices();}
+  catch(e){hideLoad();toast('Error: '+e.message);}
+};
+async function renderPublicNotices(){
+  const list=$('noticeList');
+  try{
+    const snap=await getDocs(query(collection(db,'notices'),orderBy('sentAt','desc')));
+    const items=snap.docs.map(d=>({id:d.id,...d.data()}));
+    if(!items.length){list.innerHTML=`<div class="notice-empty"><div style="font-size:2.5rem">📋</div><p>No notices yet.</p></div>`;return;}
+    list.innerHTML=items.map(n=>`
+      <div class="notice-card">
+        <div class="notice-card-title">📢 ${n.title}</div>
+        <div class="notice-card-msg">${n.message}</div>
+        <div class="notice-meta">
+          ${n.date?`<span class="notice-meta-item">📅 <strong>Event Date:</strong> ${fmtDate(n.date)}</span>`:''}
+          ${n.time?`<span class="notice-meta-item">🕐 <strong>Event Time:</strong> ${fmtTime(n.time)}</span>`:''}
+          <span class="notice-meta-item">🗓 Posted: ${new Date(n.sentAt).toLocaleDateString('en-GB',{year:'numeric',month:'long',day:'numeric'})}</span>
+        </div>
+      </div>`).join('');
+  }catch(e){list.innerHTML=`<div class="notice-empty"><p>Could not load notices.</p></div>`;}
+}
+
+/* LIGHTBOX */
+window.openLB=(url,type,caption)=>{
+  $('lbContent').innerHTML=type==='video'?`<video src="${url}" controls autoplay style="max-width:92vw;max-height:80vh;border-radius:10px;display:block"></video>`:`<img src="${url}" style="max-width:92vw;max-height:80vh;border-radius:10px;display:block"/>`;
+  $('lbCap').textContent=caption;$('lb').classList.add('open');
+};
+window.closeLB=()=>{$('lb').classList.remove('open');$('lbContent').innerHTML='';};
+
+/* JOIN */
+window.handleJoin=()=>{const v=$('joinInput').value.trim();if(!v)return;toast('🙏 धन्यवाद! Thank you for joining!');$('joinInput').value='';};
+
+/* SCROLL ANIM */
+const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.style.opacity='1';e.target.style.transform='translateY(0)';}});},{threshold:.1});
+document.querySelectorAll('.stat-card,.donor-card').forEach(el=>{el.style.opacity='0';el.style.transform='translateY(16px)';el.style.transition='opacity .5s,transform .5s';obs.observe(el);});
+
+/* ══════════════════════════════════════
+   MANAGE TAB — EDIT & REORDER
+══════════════════════════════════════ */
+let editCtx = {}; // stores current edit context
+
+async function loadManageTab(){
+  const [festivals, members, honours, folders] = await Promise.all([
+    getFestivals(), getMembers(), getHonours(), getFolders()
+  ]);
+  renderSortList('sortFestivals', festivals, 'festival');
+  renderSortList('sortMembers', members, 'member');
+  renderSortList('sortHonours', honours, 'honour');
+  renderSortList('sortFolders', folders, 'folder');
+}
+
+function renderSortList(containerId, items, type){
+  const container = $(containerId);
+  if(!items.length){ container.innerHTML=`<p style="color:var(--gray);font-style:italic;padding:.5rem 0">No ${type}s yet. Add some first.</p>`; return; }
+  container.innerHTML = items.map((item,i) => {
+    const title = item.nameNp || item.name || item.folder || 'Item';
+    const sub = item.nameEn || item.role || item.badge || '';
+    const img = item.photoUrl || item.url || '';
+    const emoji = item.emoji || '';
+    return `
+      <div class="sort-item" draggable="true" data-id="${item.id}" data-type="${type}" data-idx="${i}">
+        <span class="sort-handle" title="Drag to reorder">☰</span>
+        <div class="sort-order-badge">${i+1}</div>
+        ${img ? `<img class="sort-img" src="${img}" alt="${title}"/>` : `<div class="sort-img">${emoji||'📌'}</div>`}
+        <div class="sort-info">
+          <div class="sort-title">${title}</div>
+          ${sub ? `<div class="sort-sub">${sub}</div>` : ''}
+        </div>
+        <div class="sort-actions">
+          <button class="sort-edit-btn" onclick="openEditModal('${type}','${item.id}')">✏️ Edit</button>
+          <button class="sort-del-btn" onclick="deleteItem('${type}','${item.id}','${title.replace(/'/g,"\\'")}')">🗑 Del</button>
+        </div>
+      </div>`;
+  }).join('');
+  setupDragSort(container, type, items);
+}
+
+function setupDragSort(container, type, items){
+  let dragSrc = null;
+  container.querySelectorAll('.sort-item').forEach(item => {
+    item.addEventListener('dragstart', e => {
+      dragSrc = item;
+      item.classList.add('dragging');
+      e.dataTransfer.effectAllowed = 'move';
+    });
+    item.addEventListener('dragend', () => {
+      item.classList.remove('dragging');
+      container.querySelectorAll('.sort-item').forEach(i => i.classList.remove('drag-over'));
+    });
+    item.addEventListener('dragover', e => {
+      e.preventDefault();
+      e.dataTransfer.dropEffect = 'move';
+      if(item !== dragSrc){ item.classList.add('drag-over'); }
+    });
+    item.addEventListener('dragleave', () => item.classList.remove('drag-over'));
+    item.addEventListener('drop', async e => {
+      e.preventDefault();
+      item.classList.remove('drag-over');
+      if(dragSrc && dragSrc !== item){
+        // reorder in DOM
+        const allItems = [...container.querySelectorAll('.sort-item')];
+        const srcIdx = allItems.indexOf(dragSrc);
+        const tgtIdx = allItems.indexOf(item);
+        if(srcIdx < tgtIdx) item.after(dragSrc); else item.before(dragSrc);
+        // Save new order to Firebase
+        await saveOrder(container, type);
+      }
+    });
+  });
+}
+
+async function saveOrder(container, type){
+  const collMap = {festival:'festivals', member:'members', honour:'honours', folder:'folders'};
+  const coll = collMap[type];
+  const items = [...container.querySelectorAll('.sort-item')];
+  showLoad('Saving order…');
+  try{
+    for(let i=0; i<items.length; i++){
+      const id = items[i].dataset.id;
+      await setDoc(doc(db, coll, id), {order: i}, {merge: true});
+    }
+    hideLoad();
+    toast(`✓ Order saved! Website updated.`);
+    // Update order badges
+    items.forEach((item, i) => {
+      const badge = item.querySelector('.sort-order-badge');
+      if(badge) badge.textContent = i+1;
+    });
+    // Refresh public
+    if(type==='festival') renderPublicFestivals();
+    if(type==='member') renderPublicMembers();
+    if(type==='honour') renderPublicHonours();
+    if(type==='folder') renderPublicFolderTabs();
+  }catch(e){ hideLoad(); toast('Error saving order: '+e.message); }
+}
+
+/* DELETE FROM MANAGE TAB */
+window.deleteItem = async (type, id, name) => {
+  const collMap = {festival:'festivals', member:'members', honour:'honours', folder:'folders', media:'media'};
+  if(!confirm(`Delete "${name}"?`)) return;
+  showLoad('Deleting…');
+  try{
+    await deleteDoc(doc(db, collMap[type], id));
+    hideLoad(); toast('✓ Deleted.');
+    loadManageTab();
+    if(type==='festival') renderPublicFestivals();
+    if(type==='member') renderPublicMembers();
+    if(type==='honour') renderPublicHonours();
+    if(type==='folder') renderPublicFolderTabs();
+  }catch(e){ hideLoad(); toast('Error: '+e.message); }
+};
+
+/* ══════════════════════════════════════
+   EDIT MODAL
+══════════════════════════════════════ */
+window.openEditModal = async (type, id) => {
+  const collMap = {festival:'festivals', member:'members', honour:'honours', folder:'folders'};
+  showLoad('Loading…');
+  try{
+    const docSnap = await getDoc(doc(db, collMap[type], id));
+    if(!docSnap.exists()){ hideLoad(); toast('Item not found.'); return; }
+    const data = {...docSnap.data(), id};
+    editCtx = {type, id, collName: collMap[type], data};
+    hideLoad();
+    $('editModal').classList.add('open');
+    document.body.style.overflow='hidden';
+    buildEditFields(type, data);
+  }catch(e){ hideLoad(); toast('Error: '+e.message); }
+};
+
+function buildEditFields(type, data){
+  const titles = {festival:'🎊 Edit Festival', member:'👤 Edit Member', honour:'🏅 Edit Honour', folder:'📁 Edit Folder'};
+  $('editModalTitle').textContent = titles[type] || '✏️ Edit';
+  let html = '';
+  if(type === 'festival'){
+    html = `
+      <div class="fg"><label>Festival Name (Nepali)</label><input type="text" id="ef_nameNp" value="${esc(data.nameNp||'')}"/></div>
+      <div class="fg"><label>Festival Name (English)</label><input type="text" id="ef_nameEn" value="${esc(data.nameEn||'')}"/></div>
+      <div class="fg"><label>Description</label><textarea id="ef_desc" style="min-height:80px">${esc(data.desc||'')}</textarea></div>
+      <div class="fg"><label>Emoji Icon</label><input type="text" id="ef_emoji" value="${esc(data.emoji||'')}"/></div>`;
+  } else if(type === 'member'){
+    html = `
+      <div class="fg"><label>Member Name</label><input type="text" id="ef_name" value="${esc(data.name||'')}"/></div>
+      <div class="fg"><label>Role / Position</label><input type="text" id="ef_role" value="${esc(data.role||'')}"/></div>
+      <div class="fg"><label>Gmail</label><input type="email" id="ef_email" value="${esc(data.email||'')}"/></div>`;
+  } else if(type === 'honour'){
+    html = `
+      <div class="fg"><label>Name</label><input type="text" id="ef_name" value="${esc(data.name||'')}"/></div>
+      <div class="fg"><label>Badge / Title</label><input type="text" id="ef_badge" value="${esc(data.badge||'')}"/></div>
+      <div class="fg"><label>Description</label><textarea id="ef_desc" style="min-height:100px">${esc(data.desc||'')}</textarea></div>`;
+  } else if(type === 'folder'){
+    html = `<div class="fg"><label>Folder Name</label><input type="text" id="ef_name" value="${esc(data.name||'')}"/></div>`;
+  }
+  $('editModalFields').innerHTML = html;
+};
+
+function esc(str){ return String(str).replace(/"/g,'&quot;').replace(/</g,'&lt;'); }
+
+window.saveEdit = async () => {
+  const {type, id, collName} = editCtx;
+  let updates = {};
+  if(type==='festival'){
+    updates = {
+      nameNp: $('ef_nameNp').value.trim(),
+      nameEn: $('ef_nameEn').value.trim(),
+      desc: $('ef_desc').value.trim(),
+      emoji: $('ef_emoji').value.trim()
+    };
+    if(!updates.nameNp||!updates.nameEn){ toast('Please fill festival names.'); return; }
+  } else if(type==='member'){
+    updates = {
+      name: $('ef_name').value.trim(),
+      role: $('ef_role').value.trim(),
+      email: $('ef_email').value.trim()
+    };
+    if(!updates.name){ toast('Please enter a name.'); return; }
+  } else if(type==='honour'){
+    updates = {
+      name: $('ef_name').value.trim(),
+      badge: $('ef_badge').value.trim(),
+      desc: $('ef_desc').value.trim()
+    };
+    if(!updates.name){ toast('Please enter a name.'); return; }
+  } else if(type==='folder'){
+    updates = { name: $('ef_name').value.trim() };
+    if(!updates.name){ toast('Please enter a folder name.'); return; }
+  }
+  showLoad('Saving…');
+  try{
+    await setDoc(doc(db, collName, id), updates, {merge: true});
+    hideLoad();
+    closeEditModal();
+    toast('✓ Changes saved! Website updated.');
+    loadManageTab();
+    if(type==='festival'){ renderPublicFestivals(); loadFestAdminGrid(); }
+    if(type==='member'){ renderPublicMembers(); loadAdminMembers(); }
+    if(type==='honour'){ renderPublicHonours(); loadHonourAdminGrid(); }
+    if(type==='folder'){ renderPublicFolderTabs(); loadAdminFolders(); }
+  }catch(e){ hideLoad(); toast('Error: '+e.message); }
+};
+
+window.closeEditModal = () => {
+  $('editModal').classList.remove('open');
+  document.body.style.overflow = '';
+  editCtx = {};
+};
+
+/* CARD DETAIL MODALS */
+window.openFestModal = (f) => {
+  const bgs = ['bg1','bg2','bg3','bg4','bg5','bg6'];
+  const bg = f.bg || bgs[0];
+  $('cardModalContent').innerHTML = `
+    ${f.photoUrl
+      ? `<div style="overflow:hidden;border-radius:24px 24px 0 0;height:280px"><img src="${f.photoUrl}" alt="${f.nameNp}" style="width:100%;height:100%;object-fit:cover;display:block"/></div>`
+      : `<div class="card-modal-img-placeholder ${bg}" style="border-radius:24px 24px 0 0">${f.emoji||'🎊'}</div>`
+    }
+    <div class="card-modal-body">
+      <div class="card-modal-tag">🎊 Festival · चाडपर्व</div>
+      <div class="card-modal-title">${f.nameNp}</div>
+      <div class="card-modal-subtitle">${f.nameEn}</div>
+      <div style="width:40px;height:3px;background:var(--blue);border-radius:9999px;margin-bottom:1.2rem"></div>
+      <div class="card-modal-desc">${f.desc || 'A cherished festival celebrated by our community with joy and togetherness.'}</div>
+    </div>`;
+  $('cardModal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+};
+
+window.openHonourModal = (h) => {
+  $('cardModalContent').innerHTML = `
+    ${h.photoUrl
+      ? `<div style="overflow:hidden;border-radius:24px 24px 0 0;height:280px"><img src="${h.photoUrl}" alt="${h.name}" style="width:100%;height:100%;object-fit:cover;display:block"/></div>`
+      : `<div class="card-modal-img-placeholder" style="background:linear-gradient(135deg,var(--tint),var(--blue-pale));border-radius:24px 24px 0 0">🏅</div>`
+    }
+    <div class="card-modal-body">
+      <div class="card-modal-tag">🏅 Honoured Member · सम्मानित</div>
+      <div class="card-modal-title">${h.name}</div>
+      ${h.badge ? `<div class="card-modal-badge">${h.badge}</div>` : ''}
+      <div style="width:40px;height:3px;background:var(--blue);border-radius:9999px;margin-bottom:1.2rem"></div>
+      <div class="card-modal-desc">${h.desc}</div>
+    </div>`;
+  $('cardModal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+};
+
+window.closeCardModal = () => {
+  $('cardModal').classList.remove('open');
+  document.body.style.overflow = '';
+};
+
+/* ESC key closes modal */
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') { closeCardModal(); closeLB(); }
+});
+
+/* INIT */
+renderPublicFolderTabs();
+renderPublicMembers();
+renderPublicNotices();
+renderPublicFestivals();
+renderPublicHonours();
+</script>
+</body>
+</html>
